@@ -1,0 +1,477 @@
+body {
+    background-image:url('../img/footer-bg2.jpg');
+    color: #463904;
+    font-family: "Georgia", serif;
+    margin: 0;
+    }
+    
+.wrap {
+    background-image:url('../img/bg.jpg');
+    border-image:url('../img/border-bg.jpg') 10 0 repeat;
+        -webkit-border-image:url('../img/border-bg.jpg') 10px 0 repeat;
+        -moz-border-image:url('../img/border-bg1.jpg') 10 0 repeat;
+        -o-border-image:url('../img/border-bg.jpg') 10 0 repeat;
+    border-width: 10px 0;
+    }
+    
+#content {
+    padding: 20px 0;    
+    }
+    
+h1, h2, h3, h4 {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    }
+    
+
+h1 {
+    border-bottom: 1px solid rgba(153, 153, 102, .2);
+    line-height: 60px;
+    margin: 0 0 40px 0;
+    }
+    
+    h1:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255,255,255,.6); 
+        display: block;
+        }
+        
+h2 {
+    margin: 2em 0 1em 0;
+    }
+        
+h3 {
+    margin: 2em 0 1em 0;
+    }
+    
+p, li {
+    font-size: 14px;
+    line-height: 150%;
+    }
+
+a { text-decoration: none; }    
+a:link { color: #AC3F13; }
+a:visited { color: #AC8171; }
+a:hover, a:active { color: #D83E00; }
+
+
+/* Header
+----------------------------------*/
+    
+header {
+    background-image:url('../img/header-bg.jpg');
+    color: #fff;
+    }
+    
+    header .container {
+        background:url('../img/header-bg2.jpg') no-repeat;
+        margin: 0 auto;
+        padding: 10px 0;
+        }
+    
+    header h1 {
+        margin: 0;
+        }
+        
+header nav {
+    float: left;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    }
+    
+    header nav ul { 
+        display: inline-block;
+        margin: 40px 0 0 20px;
+        padding: 0; 
+        }
+    
+    header nav li {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 10px 0 0;
+        }
+        
+    
+header a {
+    text-decoration: none;
+    font-weight: bold;
+    }
+
+header a:link, header a:visited {
+    color: #fff;
+    opacity: .7;
+    }
+    
+header a:active, header a:hover {
+    opacity: 1;
+    }
+    
+header .advanced-search-link {
+    clear: right;
+    float: right;
+}
+    
+header #simple-search {
+    float: right;}
+
+    header #simple-search fieldset {
+        border: 0;
+    }
+    
+    header #simple-search input[type=submit] {
+        display: none;
+    }
+    
+    header #simple-search input[type=text] {
+        background-color: #973720;
+        background-color: rgba(0,0,0,.08);
+        border: 0;
+        color: #fff;
+        padding: 5px;
+    }
+
+
+/* Footer
+----------------------------------*/
+        
+footer {
+    color: #c0cdd0;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 40px 0 !important;
+    }
+    
+    footer img {
+        margin: 0 20px 0 0;
+        vertical-align: middle;
+        opacity: .5;
+    }
+    
+    footer a:link { color: #C2A57B; }
+    footer a:visited { color: #DAD06D; }
+    footer a:hover, footer a:active { color: #fff; }
+    
+    footer a:hover img, footer a:active img {opacity: 1;}
+        
+.logo {
+    width: 294px;
+    height: 58px;
+    background-image:url('../img/logo.png');
+    display: inline-block;
+    margin: 0 0 0 -5px;
+    text-indent: -9999px;
+    float: left;
+    }
+    
+    .logo a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        }
+
+#page-menu h2 {
+    margin-top: 18px;
+    }
+
+#page-menu ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    
+    #page-menu li {
+        border-top: 1px solid rgba(153, 153, 102, .2);
+        border-bottom: 1px solid rgba(255,255,255, .6);
+        padding: 10px 0;
+        }
+        
+    #page-menu li:first-child {
+        border-top: 0;
+        }
+        
+    #page-menu li:last-child {
+        border-bottom: 0;
+        }
+        
+    #page-menu .sub-menu {
+        margin: 10px 0 10px 10px;
+        }
+        
+    #page-menu .sub-menu li {
+        border: 0;
+        margin: 0;
+        padding: 5px 0;
+        }
+        
+#page-menu .current {
+    font-weight: bold;
+    font-style: italic;
+    }
+    
+    #page-menu .current a:after {
+        content: " \00bb";
+        }
+
+
+/* Homepage
+----------------------------------*/
+        
+.home-collections {
+    font-size: 18px;
+    padding: 5px 0;
+    }
+    
+.home-collections div {
+    margin-bottom: 20px;
+    position: relative;
+    }
+    
+.home-collections a img {
+    margin: -15% 0 0 0;
+    vertical-align: bottom;
+    }
+    
+.home-collections a { 
+    max-height: 160px;
+    color: #fff; 
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    display: block;
+    overflow: hidden;
+    }
+        
+.home-collections img {
+    width: 100%;
+    }
+    
+.home-collections span {
+    background-color: rgba(51,28,13,.6);
+    box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+    width: 99.5%;
+    margin: 0 auto;
+    padding: 10px;
+    position: absolute;
+    bottom: 1px;
+    left: 1;
+    }
+    
+.intro {
+    padding: 5px 0;
+    }
+    
+    .intro h1 {
+        border: 0;
+        line-height: 1.25em;
+        margin-bottom: .5em;
+        }
+        
+    .intro h1:after {
+        background-color: transparent;
+        }
+
+
+/* Browse Themes
+----------------------------------*/
+
+#themes .theme-icon {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);    
+    overflow: hidden;
+    }
+    
+    #themes .theme-icon img {
+        width: 100%;
+        vertical-align: bottom;
+        }
+
+
+
+/* Show Theme
+----------------------------------*/
+
+#collections .author-image {
+    max-width: 100px;
+    border: 1px solid rgba(0,0,0,.25);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    float: left;
+    margin: 0 20px 0 0;
+    }
+
+#collections .wrap {
+    padding: 50px 0;
+    }
+    
+#collections h1 {
+    border: 0;
+    margin: 0;
+    }
+    
+    #collections h1:after {
+        background-color: transparent;
+        }
+    
+h2.essay {
+    font-family: "Georgia", serif;
+    font-weight: normal;
+    margin: 1em 0 0 0;
+    text-transform: none;
+    }
+    
+.essay-author {
+    margin-top: 0;
+    }
+    
+#collections .theme-icon {
+    width: 90%;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);    
+    margin: 0;
+    }
+    
+#collections .icon-credit {
+    font-style: italic;
+    }    
+    
+.theme-book {
+    clear: left;
+    }
+    
+.theme-book-cover {
+    width: 90px;
+    border: 1px solid rgba(0,0,0,.25);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    float: left;
+    margin: 0 10px 40px 0;
+    }
+    
+.theme-book-meta {
+    display: inline-block;
+    margin: 0;
+    }
+    
+    .theme-book-title {
+        font-style: italic;
+        font-weight: bold;
+        }
+        
+
+/* Browse Books
+----------------------------------*/
+
+#books .row {
+    margin: 0 0 50px 0;
+    }
+
+#items .book-thumbnail {
+    background: url('../img/shelf-small.png') no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    padding: 0 0 4% 0;
+    text-align: center;
+    }
+
+#items .book-thumbnail img {
+    width: 66%;
+    border: 1px solid rgba(0,0,0,.25);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);   
+    margin: auto;
+    }
+
+#items .book-meta p {
+    margin: 0;
+    }
+    
+#items .book-title {
+    font-weight: bold;
+    font-style: italic;
+    }
+
+/* Show Book
+----------------------------------*/
+
+#item .wrap {
+    padding: 50px 0;
+    }
+    
+#item .book-image {
+    border: 1px solid rgba(0,0,0,.25);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    max-width: 90%;
+    height: auto;
+    }
+        
+#item .book-theme {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+    }
+        
+#item .book-title {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+    text-transform: none;    
+    }
+
+#item .book-author {
+    font-size: 16px;
+    font-style: normal;
+    }
+    
+#item .no-image {
+    width: 80%;
+    background-color: #ccc;
+    border: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    font-size: 24px;
+    text-align: center;
+    padding: 60% 5%;
+    }
+
+    
+/* Browse Resources
+----------------------------------*/
+
+.item-description p {
+    margin-bottom: 0;
+    }
+    
+.item-meta h2 {
+    margin: 0 0 auto 0;
+    }
+
+.item.row {
+    border-top: 1px solid rgba(153, 153, 102, .2);
+    border-bottom: 1px solid rgba(255,255,255, .6);
+    padding: 30px 0;
+    margin-bottom: 0;
+    }
+    
+    .item.row:first-child {
+        border-top: 0;
+        padding: 19px 0 30px 0;
+        }
+        
+    .item.row:last-child {
+        border-bottom: 0;
+        }
+
+.item-thumbnail {
+    height: 110px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);    
+    overflow: hidden;
+    }
+
+.item-thumbnail img {
+    width: 100%;
+    }
