@@ -66,8 +66,30 @@
         <h2>Browse by</h2>
         
         <ul>
-            <li>Time Period</li>
-            <li>Theme</li>
+            <li>Time Period
+                <?php 
+                    $db = get_db();
+                    $timePeriodId = $db->getTable('Element')->findByElementSetNameAndElementName('Item Type Metadata', 'Time Period')->id;   
+                    $timePeriodTexts = explode("\n", $db->getTable('SimpleVocabTerm')->findByElementId($timePeriodId)->terms);
+                    if($timePeriodTexts) {
+                        echo '<ul class="sub-menu">';
+                        foreach($timePeriodTexts as $timePeriodText) {
+                            echo '<li>' . bc_link_to_items_with_element_text($timePeriodText, array(), 'browse', $timePeriodId, $timePeriodText) . '</li>';
+                        }
+                        echo '</ul>';
+                    }   
+                ?>                
+            </li>
+            <li>Theme
+                <?php $collections = get_collections(); 
+                set_collections_for_loop($collections);
+                echo '<ul class="sub-menu">';
+                while(loop_collections()):
+                    echo '<li>' . link_to_collection() . '</li>';
+                endwhile;
+                echo '</ul>';
+                ?>
+            </li>
             <li>Item Type
                 <?php 
                     $allItemTypes = get_item_types();
@@ -89,10 +111,20 @@
                     echo '</ul>';
                     endif; ?>
             </li>
-            <li>Region</li>
+            <li>Region
+                <?php 
+                    $regionId = $db->getTable('Element')->findByElementSetNameAndElementName('Item Type Metadata', 'Region')->id;   
+                    $regionTexts = explode("\n", $db->getTable('SimpleVocabTerm')->findByElementId($regionId)->terms);
+                    if($regionTexts) {
+                        echo '<ul class="sub-menu">';
+                        foreach($regionTexts as $regionText) {
+                            echo '<li>' . bc_link_to_items_with_element_text($regionText, array(), 'browse', $regionId, $regionText) . '</li>';
+                        }
+                        echo '</ul>';
+                    }   
+                ?>                
+                </li>
         </ul>
-        
-        <?php /* $timePeriodID = get_db()->getTable('Elements')->findByName('Time Period')->id; */ ?>
         
     </div>
 

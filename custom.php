@@ -84,4 +84,17 @@ function bc_display_filters() {
 	}
 }
 
+function bc_link_to_items_with_element_text($text = null, $props = array(), $action = 'browse', $elementId = null, $elementText = null) {
+    $queryParams = array();
+    $queryParams['advanced'][0]['element_id'] = $elementId;
+    $queryParams['advanced'][0]['type'] = 'contains';
+    $queryParams['advanced'][0]['terms'] = $elementText;
+
+    if ($text === null) {
+        $text = $elementText;
+    }
+    
+    return link_to('items', $action, $text, $props, $queryParams);
+    }
+
 ?>
