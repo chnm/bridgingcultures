@@ -426,7 +426,19 @@ h2.essay {
     font-size: 16px;
     font-style: normal;
     }
-    
+
+
+/* Show Item
+----------------------------------*/
+
+#item .item-title {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: none;  
+}
+
 #item .no-image {
     width: 80%;
     background-color: #ccc;
@@ -434,6 +446,7 @@ h2.essay {
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     font-size: 24px;
     text-align: center;
+    margin: 0 0 1em 0;
     padding: 60% 5%;
     }
 
