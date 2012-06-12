@@ -393,12 +393,9 @@ h2.essay {
     font-style: italic;
     }
 
+
 /* Show Book
 ----------------------------------*/
-
-#item .wrap {
-    padding: 50px 0;
-    }
     
 #item .book-image {
     border: 1px solid rgba(0,0,0,.25);
@@ -425,6 +422,14 @@ h2.essay {
 #item .book-author {
     font-size: 16px;
     font-style: normal;
+    }
+
+#item #right-content {
+    word-wrap: break-word;
+    }    
+
+#item .wrap {
+    padding: 50px 0;
     }
 
 

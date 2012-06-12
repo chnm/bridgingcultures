@@ -1,4 +1,6 @@
-<?php head(array('title' => item('Dublin Core', 'Title'),'bodyid'=>'item','bodyclass' => 'show item')); ?>
+<?php head(array('title' => item('Dublin Core', 'Title'),'bodyid'=>'item','bodyclass' => 'show item')); 
+$currentItemId = item('id');
+?>
 
     <?php if(item_has_type('Book')): ?>
 
@@ -145,6 +147,9 @@
                 } ?>
             <?php endif; ?>
             
+            <?php
+            set_current_item(get_item_by_id($currentItemId));
+            ?>            
             <h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
             
             <?php echo show_item_metadata(); ?>
