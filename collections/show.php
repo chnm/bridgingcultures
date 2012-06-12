@@ -33,7 +33,7 @@ endif;
 
     <h1><?php echo __('Theme: ' . collection('name')) ?></h1>
 
-<?php if($multiItems = multicollections_get_items_in_collection(10, 'Essay')):
+<?php if($multiItems = multicollections_get_items_in_collection(1, 'Essay')):
     foreach($multiItems as $multiItem) {
         set_current_item($multiItem);                            
         echo '<h2 class="essay">'.item('Dublin Core','Title').'</h2>';
