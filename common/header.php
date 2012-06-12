@@ -46,7 +46,6 @@
             </nav>
             
             <?php echo simple_search(); ?>
-            <?php echo link_to_advanced_search('Advanced Search', array('class'=>'advanced-search-link')); ?>
         
         </div>
     

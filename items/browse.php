@@ -1,17 +1,21 @@
-<?php head(array('title'=>'Browse Resources','bodyid'=>'items','bodyclass' => 'browse')); ?>
+<?php
+$db = get_db();
+
+if($itemTypeId = Zend_Controller_Front::getInstance()->getRequest()->getParam('type')) { 
+    $itemTypeName = $db->getTable('ItemType')->find($itemTypeId)->name;
+    if(!$itemTypeName) {
+        $itemTypeName = 'Book';
+    }
+    $title = 'Browse '. $itemTypeName . 's';
+} else {
+    $title = 'Browse Items';
+} 
+
+head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
 
 <div class="browse-resource-header">
 
-    <?php 
-    
-        if($itemTypeName = Zend_Controller_Front::getInstance()->getRequest()->getParam('type')) { 
-            $itemTypeName = get_db()->getTable('ItemType')->findByName($itemTypeName)->name;
-            echo '<h1>Browse ' . $itemTypeName . 's ('.  total_results() . ' total)</h1>';
-        } else {
-            echo '<h1>Browse Items ('.  total_results(). ' total)</h1>';
-        }
-        
-    ?>
+    <h1><?php echo $title; ?> (<?php echo total_results(); ?> total)</h1>
     
     <?php echo pagination_links(); ?>
 
@@ -68,7 +72,6 @@
         <ul>
             <li>Time Period
                 <?php 
-                    $db = get_db();
                     $timePeriodId = $db->getTable('Element')->findByElementSetNameAndElementName('Item Type Metadata', 'Time Period')->id;   
                     $timePeriodTexts = explode("\n", $db->getTable('SimpleVocabTerm')->findByElementId($timePeriodId)->terms);
                     if($timePeriodTexts) {
@@ -85,7 +88,8 @@
                 set_collections_for_loop($collections);
                 echo '<ul class="sub-menu">';
                 while(loop_collections()):
-                    echo '<li>' . link_to_collection() . '</li>';
+                    $collection = get_current_collection();
+                    echo '<li>' . link_to_items_in_collection($collection->name) . '</li>';
                 endwhile;
                 echo '</ul>';
                 ?>
