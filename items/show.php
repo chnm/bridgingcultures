@@ -13,8 +13,12 @@
             endif; ?>
             
             <ul>
-                <li><a href="#summary">Book Summary</a></li>
-                <li><a href="#author">About the Author</a></li>
+                <?php if(item('Dublin Core', 'Description')): ?>                
+                    <li><a href="#summary">Book Summary</a></li>
+                <?php endif; ?>
+                <?php if(item('Item Type Metadata', 'Author bio')): ?>                
+                    <li><a href="#author">About the Author</a></li>
+                <?php endif; ?>
                 <li>Reader's Guide</li>
                 <li>Links to Resources</li>
             </ul>
@@ -123,7 +127,26 @@
         </nav>
         
         <div id="right-content" class="eight columns offset-by-one">
-        
+            <h3 class="book-theme">
+            <?php if($themes =  multicollections_get_collections_for_item()):
+                $themesCount = count($themes);
+                $i = 0;
+                if($themesCount > 1) {
+                    echo 'Themes: ';
+                } else {
+                    echo 'Theme: ';
+                }
+                foreach($themes as $theme) {
+                    echo link_to_collection($theme->name, array(), 'show', $theme);
+                    $i++;
+                    if($i < $themesCount) {
+                        echo ', ';
+                    }
+                } ?>
+            <?php endif; ?>
+            
+            <h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
+            
             <?php echo show_item_metadata(); ?>
         
         </div>
