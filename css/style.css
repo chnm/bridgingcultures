@@ -177,6 +177,7 @@ footer {
 
 #page-menu ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
     }
     
@@ -459,37 +460,99 @@ h2.essay {
 /* Browse Resources
 ----------------------------------*/
 
-.item-description p {
+#items .item-description p {
     margin-bottom: 0;
     }
     
-.item-meta h2 {
+#items .item-meta h2 {
     margin: 0 0 auto 0;
     }
 
-.item.row {
+#items .item.row {
     border-top: 1px solid rgba(153, 153, 102, .2);
     border-bottom: 1px solid rgba(255,255,255, .6);
     padding: 30px 0;
     margin-bottom: 0;
     }
     
-    .item.row:first-child {
+    #items .item.row:first-child {
         border-top: 0;
         padding: 19px 0 30px 0;
         }
         
-    .item.row:last-child {
+    #items .item.row:last-child {
         border-bottom: 0;
         }
 
-.item-thumbnail {
+#items .item-thumbnail {
     height: 110px;
     border: 1px solid #fff;
     box-shadow: 0 0 10px rgba(0,0,0,.3);    
     overflow: hidden;
     }
 
-.item-thumbnail img {
+#items .item-thumbnail img {
     width: 100%;
     }
+    
+#items .pagination_list {
+    float: right;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;    
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+    }
+    
+    #items .pagination_list li {
+        display: inline-block;
+        font-size: 21px;
+        margin: 0 0 0 20px;
+        }
+        
+    #items .pagination_list .pagination_next,
+    #items .pagination_list .pagination_previous {
+        background: url('../img/border-bg.jpg') repeat;
+        border: 1px solid #4E3B05;
+        border-radius: 5px;
+        }
+        
+        #items .pagination_list .pagination_next a,
+        #items .pagination_list .pagination_previous a {
+            padding: 10px;
+            font-size: 0;
+            display: inline-block;
+            line-height: 0;
+            }
+            
+        #items .pagination_list .pagination_next a:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-left: 14px solid #4E3B05;
+            border-bottom: 7px solid transparent;
+            display: inline-block;
+            line-height: 0;
+            padding: 0;
+            }
+            
+        #items .pagination_list .pagination_previous a:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-right: 14px solid #4E3B05;
+            border-bottom: 7px solid transparent;
+            display: inline-block;
+            line-height: 0;
+            padding: 0;
+            }
+            
+        #items .pagination_list .pagination_next.both{
+            border-radius: 0 5px 0 5px;
+            }
+            
+        #items .pagination_list .pagination_previous.both{
+            border-radius: 5px 0 5px 0;
+            }

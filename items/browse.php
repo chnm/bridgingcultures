@@ -15,9 +15,9 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
 
 <div class="browse-resource-header">
 
-    <h1><?php echo $title; ?> (<?php echo total_results(); ?> total)</h1>
-    
     <?php echo pagination_links(); ?>
+
+    <h1><?php echo $title; ?> (<?php echo total_results(); ?> total)</h1>
 
     <?php if($itemTypeName == 'Book'): ?>
 
