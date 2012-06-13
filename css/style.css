@@ -495,19 +495,29 @@ h2.essay {
     width: 100%;
     }
     
-#items .pagination_list {
+#items .pagination {
     float: right;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: bold;    
-    list-style-type: none;
-    padding: 0;
-    text-transform: uppercase;
+    margin: .5em 0;
     }
     
-    #items .pagination_list li {
+    #items .pagination_list {
+        box-shadow: 0 0 10px #b9b9b9;
+        border-radius: 5px;
         display: inline-block;
-        font-size: 21px;
+        list-style-type: none;
         margin: 0 0 0 20px;
+        padding: 0;
+        text-align: right;
+        font-size: 0;
+        }
+    
+    #items .pagination li, #items .pagination p {
+        display: inline-block;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 21px;
+        font-weight: bold;    
+        margin: 0;
+        text-transform: uppercase;
         }
         
     #items .pagination_list .pagination_next,
@@ -550,9 +560,11 @@ h2.essay {
             }
             
         #items .pagination_list .pagination_next.both{
-            border-radius: 0 5px 0 5px;
+            border-radius: 0 5px 5px 0;
+            margin-left: 0;
             }
             
         #items .pagination_list .pagination_previous.both{
-            border-radius: 5px 0 5px 0;
+            border-radius: 5px 0 0 5px;
+            border-right: 0;
             }

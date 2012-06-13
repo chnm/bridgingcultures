@@ -1,7 +1,10 @@
 <?php if ($this->pageCount > 1): ?>
-<ul class="pagination_list">
 
-    <li><?php echo __('Page ') . $this->current . __(' of ') . $this->last; ?></li>
+<div class="pagination">
+
+<p><?php echo __('Page ') . $this->current . __(' of ') . $this->last; ?></p>
+
+<ul class="pagination_list">
     
     <?php if (isset($this->previous)): ?>
     <!-- Previous page link --> 
@@ -26,4 +29,6 @@
     <?php endif; ?>
 
 </ul>
+
+</div>
 <?php endif; ?>
