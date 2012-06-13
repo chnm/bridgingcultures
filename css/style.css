@@ -239,6 +239,9 @@ footer {
     text-decoration: none;
     border: 1px solid #ffffff;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
     display: block;
     overflow: hidden;
     }
@@ -283,7 +286,10 @@ footer {
     width: 100%;
     border-radius: 100px;
     border: 1px solid #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,.3);    
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
     overflow: hidden;
     }
     
@@ -301,6 +307,9 @@ footer {
     max-width: 100px;
     border: 1px solid rgba(0,0,0,.25);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
     float: left;
     margin: 0 20px 0 0;
     }
@@ -332,7 +341,10 @@ h2.essay {
 #collections .theme-icon {
     width: 90%;
     border: 1px solid #ffffff;
-    box-shadow: 0 0 10px rgba(0,0,0,.3);    
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
     margin: 0;
     }
     
@@ -348,6 +360,9 @@ h2.essay {
     width: 90px;
     border: 1px solid rgba(0,0,0,.25);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
     float: left;
     margin: 0 10px 40px 0;
     }
@@ -381,7 +396,10 @@ h2.essay {
 #items .book-thumbnail img {
     width: 66%;
     border: 1px solid rgba(0,0,0,.25);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);   
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
     margin: auto;
     }
 
@@ -401,6 +419,9 @@ h2.essay {
 #item .book-image {
     border: 1px solid rgba(0,0,0,.25);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);    
     max-width: 90%;
     height: auto;
     }
@@ -450,6 +471,7 @@ h2.essay {
     background-color: #ccc;
     border: 1px solid rgba(255,255,255,.25);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
+    
     font-size: 24px;
     text-align: center;
     margin: 0 0 1em 0;
@@ -459,6 +481,26 @@ h2.essay {
     
 /* Browse Resources
 ----------------------------------*/
+
+#items #filter-list {
+    border-bottom: 1px solid rgba(255,255,255, .6);
+    list-style-type: none;
+    margin: 0;
+    padding: 1em 0;
+    }
+    
+    #items #filter-list li {
+        background: url('../img/border-bg.jpg') repeat;
+        border: 1px solid #4E3B05;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #b9b9b9;
+            -webkit-box-shadow: 0 0 10px #b9b9b9;
+            -moz-box-shadow: 0 0 10px #b9b9b9;
+            -o-box-shadow: 0 0 10px #b9b9b9;
+        color: rgba(255,255,255,.9);
+        display: inline-block;
+        padding: 5px 10px;    
+    }
 
 #items .item-description p {
     margin-bottom: 0;
@@ -487,7 +529,10 @@ h2.essay {
 #items .item-thumbnail {
     height: 110px;
     border: 1px solid #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,.3);    
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
     overflow: hidden;
     }
 
@@ -502,6 +547,9 @@ h2.essay {
     
     #items .pagination_list {
         box-shadow: 0 0 10px #b9b9b9;
+            -webkit-box-shadow: 0 0 10px #b9b9b9;
+            -moz-box-shadow: 0 0 10px #b9b9b9;
+            -o-box-shadow: 0 0 10px #b9b9b9;
         border-radius: 5px;
         display: inline-block;
         list-style-type: none;
