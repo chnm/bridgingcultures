@@ -15,10 +15,16 @@
     ?>    
 
 <!-- Javascript -->
-    <?php /* 
-    queue_js(array('jquery-1.7.2','muslimjourneys'));
-    display_js(); */
+    <?php  
+    queue_js(array('jquery-1.7.2','jquery.carousel.min'));
+    display_js(); 
     ?>
+    
+    <script type="text/javascript">
+    $(function(){
+        $("div.books").carousel( { dispItems: 9, effect: "fade" } );
+    });
+    </script>
     
 </head>
 

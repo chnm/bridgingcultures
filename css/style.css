@@ -217,23 +217,126 @@ footer {
 
 /* Homepage
 ----------------------------------*/
+
+#home .books {
+    border-top: 1px solid rgba(255,255,255, .6);
+    border-bottom: 1px solid rgba(153, 153, 102, .2);
+    clear: both;
+    margin: 1em 0;
+    overflow: auto;
+    }
+    
+    #home .books:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: rgba(153, 153, 102, .2);
+        display: block;
+        margin: 0 0 1em 0;
+        }
         
-.home-collections {
+    #home .books:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255,255,255, .6);
+        clear: both;
+        display: block;
+        margin: 1em 0 0 0;
+        }
+        
+    #home .books:focus {
+        outline: none;
+        }
+
+#home .book-cover {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    }
+
+#home .carousel .previous, #home .carousel .next {
+    width: 18px;
+    height: 30px;
+    background: url('../img/arrow.png') no-repeat;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    float: left;
+    font-size: 0;
+    line-height: 0;
+    margin: 50px 0;
+    }
+    
+    #home .carousel .next {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        }
+        
+    #home .carousel .disabled {
+        cursor: default;
+        opacity: .25;
+        }
+
+#home .carousel ul {
+    margin: 5px 0;
+    padding: 0;
+    list-style-type: none;
+    }
+        
+    #home .carousel li {
+        border: 1px solid rgba(0,0,0,.25);
+        box-shadow: 0 0 5px #969696;
+            -webkit-box-shadow: 0 0 5px #969696;
+            -moz-box-shadow: 0 0 5px #969696;
+            -o-box-shadow: 0 0 5px #969696;        
+        float:left;
+        width: 90px;
+        height: 125px;
+        text-align:center;
+        overflow: hidden;
+        margin: 0 5px 20px 5px;
+        padding: 0;
+        }
+        
+        #home .carousel li:first-child {
+            margin-left: 0;
+            }
+        
+    #home .carousel li a {
+        float: left;
+        display: inline-block;
+        overflow: visible;
+        text-align: center;
+        padding: 0;
+        }
+
+#home .carousel-wrap {
+    width: 893px;
+    margin: 0 15px 15px 15px;
+    float: left;
+    padding: 5px 0;
+    }
+        
+#home .theme-icons {
     font-size: 18px;
     padding: 5px 0;
     }
     
-.home-collections div {
+#home .theme-icons div {
     margin-bottom: 20px;
     position: relative;
     }
     
-.home-collections a img {
+#home .theme-icons a img {
     margin: -15% 0 0 0;
     vertical-align: bottom;
     }
     
-.home-collections a { 
+#home .theme-icons a { 
     max-height: 160px;
     color: #fff; 
     text-decoration: none;
@@ -246,11 +349,11 @@ footer {
     overflow: hidden;
     }
         
-.home-collections img {
+#home .theme-icons img {
     width: 100%;
     }
     
-.home-collections span {
+#home .theme-icons span {
     background-color: rgba(51,28,13,.6);
     box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -264,17 +367,17 @@ footer {
     left: 1;
     }
     
-.intro {
+#home .intro {
     padding: 5px 0;
     }
     
-    .intro h1 {
+    #home .intro h1 {
         border: 0;
         line-height: 1.25em;
         margin-bottom: .5em;
         }
         
-    .intro h1:after {
+    #home .intro h1:after {
         background-color: transparent;
         }
 
