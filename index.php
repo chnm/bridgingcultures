@@ -29,7 +29,7 @@
                     echo '<div class="four columns">';
                     }  
                 $multiCollections = multicollections_get_collections_for_item();
-                if(($fullsizeHtml = item_fullsize())) {
+                if(($fullsizeHtml = item_thumbnail())) {
                     echo '<a href="collections/show/' . $multiCollections[0]->id . '">' . $fullsizeHtml . '<span>' . $multiCollections[0]->name . '</span></a>'; 
                 }
                 ?>            
@@ -80,11 +80,16 @@
     
         <h2>Featured</h2>
         
-        <h3>Commodo Aenean Purus Vestibulum Sit</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitort.</p>
-
-        <p>(Read more... )</p>
+        <?php 
+        
+        $featured = random_featured_item(); 
+        set_current_item($featured);
+        if(item_thumbnail()) {
+            echo item_thumbnail();
+        }
+        echo '<h3>'.item('Dublin Core', 'Title') . '</h3>';
+        echo item('Dublin Core', 'Description');
+        ?>
         
     </div>
     
