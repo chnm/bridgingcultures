@@ -34,7 +34,6 @@ endif;
     <h1><?php echo __('Theme: ' . collection('name')) ?></h1>
 
 <?php if($multiItems = multicollections_get_items_in_collection(1, 'Essay')):
-        set_current_item($multiItem[0]);                            
         echo '<h2 class="essay">'.item('Dublin Core','Title').'</h2>';
         echo '<p class="essay-author">by '.item('Dublin Core','Creator').'</p>';
         echo item('Dublin Core','Description');
