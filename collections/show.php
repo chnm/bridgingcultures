@@ -38,7 +38,7 @@ endif;
         echo '<p class="essay-author">by '.item('Dublin Core','Creator').'</p>';
         echo item('Dublin Core','Description');
         echo '<h2 class="author-bio">About ' . item('Dublin Core', 'Creator') .'</h2>'; 
-        echo item_thumbnail(array('class'=>'author-image'));
+        echo item_thumbnail(array('class'=>'author-image'), 1, $multiItem[0]);
         echo item('Item Type Metadata','Author Biography');
 else:
     echo '<p>No essay for this theme.</p>';
