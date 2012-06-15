@@ -24,10 +24,16 @@
 ================================================== */
 	
 	/* iPad Portrait/Browser */
-	@media only screen and (min-width: 768px) and (max-width: 991px) {}
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+	   #home .featured { width: 380px; }
+	   #home .twitter, #home .toolkit { width: 192px; }
+	   }
 	
 	/* Mobile/Browser */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+	   #home .featured { width: 420px; border-width: 0; }
+	   #home .twitter, #home .toolkit { width: 420px; }	
+	}
 	
 	/* Mobile Landscape/Browser */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}

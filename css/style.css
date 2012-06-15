@@ -224,6 +224,7 @@ footer {
     clear: both;
     margin: 1em 0;
     overflow: auto;
+    text-align: center;
     }
     
     #home .books:before {
@@ -263,10 +264,11 @@ footer {
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    float: left;
+    display: inline-block;
     font-size: 0;
     line-height: 0;
     margin: 50px 0;
+    vertical-align: top;
     }
     
     #home .carousel .next {
@@ -315,11 +317,58 @@ footer {
         }
 
 #home .carousel-wrap {
-    width: 893px;
-    margin: 0 15px 15px 15px;
-    float: left;
+    width: 90%;
+    margin: 0 15px 0 15px;
+    display: inline-block;
     padding: 5px 0;
     }
+    
+#home .featured {
+    width: 476px;
+    margin: 0;
+    padding: 0;
+    border-image: url('../img/featured-border.png') 0 2 0 2;
+    border-width: 0 2px;
+    }
+    
+    #home .featured h2 {
+        border-bottom: 1px solid rgba(153, 153, 102, .2);
+        margin: 0 0 20px 0;
+        padding: 20px 0 0 0;
+        text-align: center;
+        }
+        
+        #home .featured h2:after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255,255,255,.6);
+            display: block;
+            margin: 10px 0 0 0;        
+            }
+        
+    #home .featured h3 {
+        margin: 1em 0;
+        padding: 0 10px;
+        }
+        
+    #home .featured p {
+        padding: 0 10px; 
+        }
+    
+#home .intro {
+    padding: 5px 0;
+    }
+    
+    #home .intro h1 {
+        border: 0;
+        line-height: 1.25em;
+        margin-bottom: .5em;
+        }
+        
+    #home .intro h1:after {
+        background-color: transparent;
+        }
         
 #home .theme-icons {
     font-size: 18px;
@@ -366,20 +415,50 @@ footer {
     bottom: 1px;
     left: 1;
     }
-    
-#home .intro {
-    padding: 5px 0;
+
+#home .twitter, #home .toolkit {
+    width: 240px;
+    margin: 0;
     }
     
-    #home .intro h1 {
-        border: 0;
-        line-height: 1.25em;
-        margin-bottom: .5em;
+#home .twitter h3, #home .toolkit h3{
+    width: 100%;
+    border-bottom: 1px solid rgba(153, 153, 102, .2);
+    margin: 0 0 10px 0;
+    text-align: center;
+    }
+    
+    #home .twitter h3:before, #home .toolkit h3:before {
+        content: "";
+        width: 100%;
+        height: 55px;
+        display: block;
+        margin: 0 0 10px 0;
         }
         
-    #home .intro h1:after {
-        background-color: transparent;
+        
+        #home .twitter h3:before {
+            background: url('../img/twitter-heading.png') no-repeat;
+            background-position: center;            
+            }
+            
+        #home .toolkit h3:before {
+            background: url('../img/toolkit-heading.png') no-repeat;
+            background-position: center;
+            }
+            
+    #home .twitter h3:after, #home .toolkit h3:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255,255,255,.6);
+        display: block;
+        margin: 10px 0 0 0;
         }
+        
+    #home .twitter p, #home .toolkit p {
+        padding: 0 20px;
+    }
 
 
 /* Browse Themes

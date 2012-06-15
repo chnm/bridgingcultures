@@ -10,7 +10,8 @@
 <!-- Stylesheets -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700,700italic' rel='stylesheet' type='text/css'>
     <?php
-    queue_css(array('style','skeleton'), 'screen');
+    queue_css(array('style','skeleton','layout'), 'screen');
+
     display_css();
     ?>    
 

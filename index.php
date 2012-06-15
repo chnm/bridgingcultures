@@ -5,7 +5,7 @@
     
         <h1>Explore the Muslim Journeys Bookshelf</h1>
         
-        <p>Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. </p>
+        <p>Welcome to the "Muslim Journeys" website, offering resources for exploring new and diverse perspectives on the people, places, histories, beliefs, and cultures of Muslims around the world, including those within the United States.  Start your journey by choosing a theme or a book. </p>
     
     </div>
     
@@ -44,27 +44,58 @@
     </div>
 
 
-<div class="books carousel">
+    <div class="books carousel">
+    
+    <?php
+        set_items_for_loop(get_items(array('type' => 'Book'),30));
+        ?>
+        <?php if(has_items_for_loop()): ?>
+            <ul>
+           <!-- Loop for items -->
+            <?php while(loop_items()): ?>
+                <?php                                   
+                    echo '<li>' . link_to_item(item_fullsize(array('class' => 'book-cover', 'alt' => strip_tags(item('Dublin Core', 'Title'))))) . '</li>';
+                ?>            
+            <?php endwhile; ?>
+            </ul>
+         
+            <?php else: ?>         
+                <!-- Message if there are no items -->
+                <p>Books missing.</p>
+            <?php endif; ?>
+    		
+    </div>
 
-<?php
-    set_items_for_loop(get_items(array('type' => 'Book'),30));
-    ?>
-    <?php if(has_items_for_loop()): ?>
-        <ul>
-       <!-- Loop for items -->
-        <?php while(loop_items()): ?>
-            <?php                                   
-                echo '<li>' . link_to_item(item_fullsize(array('class' => 'book-cover', 'alt' => strip_tags(item('Dublin Core', 'Title'))))) . '</li>';
-            ?>            
-        <?php endwhile; ?>
-        </ul>
-     
-        <?php else: ?>         
-            <!-- Message if there are no items -->
-            <p>Books missing.</p>
-        <?php endif; ?>
-		
-</div>
+    <div class="twitter four columns alpha">
+    
+        <h3>Latest About #MuslimJourneys</h3>
+        
+        <p><a href="#" class="twitter-name">@dancohen</a><br>
+        Lorem Ipsum is dummy text used in printing and has been standard for ages since an unknown printer scrambled type to make a specimen book <a href="#">#muslimjourneys</a> <a href="#"><span class="date">25 Jan 11</span></a></p>
+</p>
+    
+    </div>
+    
+    <div class="featured eight columns">
+    
+        <h2>Featured</h2>
+        
+        <h3>Commodo Aenean Purus Vestibulum Sit</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitort.</p>
+
+        <p>(Read more... )</p>
+        
+    </div>
+    
+    <div class="toolkit four columns omega">
+    
+        <h3>Conversation Toolkits</h3>
+        
+        <p>Tools and tips for organizing, publicizing, and hosting informative and respectful discussions in your community using the "Muslim Journeys" books, films, and art resources. </p>
+</p>
+    
+    </div>    
 
 </div>
 
