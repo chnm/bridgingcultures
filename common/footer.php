@@ -16,9 +16,9 @@
         
         <div class="six columns alpha">
 
-        <p>Copyright 2012 by the Ari Vural Ak Center for Global Islamic Studies at George Mason University</p>
+        <p>Copyright 2012 by the Ali Vural Ak Center for Global Islamic Studies at George Mason University</p>
         
-        <p>Created by the <a href="http://islamicstudiescenter.gmu.edu/" target="_blank">Ari Vural Ak Center for Global Islamic Studies</a> at <a href="http://www.gmu.edu" target="_blank">George Mason University</a> and the <a href="http://www.neh.gov">National Endowment for the Humanities</a>.</p>
+        <p>Created by the <a href="http://islamicstudiescenter.gmu.edu/" target="_blank">Ali Vural Ak Center for Global Islamic Studies</a> at <a href="http://www.gmu.edu" target="_blank">George Mason University</a> and the <a href="http://www.neh.gov">National Endowment for the Humanities</a>.</p>
         
         </div>
         
