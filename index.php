@@ -72,8 +72,9 @@
         
         <p><a href="#" class="twitter-name">@dancohen</a><br>
         Lorem Ipsum is dummy text used in printing and has been standard for ages since an unknown printer scrambled type to make a specimen book <a href="#">#muslimjourneys</a> <a href="#"><span class="date">25 Jan 11</span></a></p>
-</p>
-    
+        
+        <p><a href="http://www.twitter.com/hashtag/MuslimJourneys" class="button">See more on Twitter</a></p>    
+        
     </div>
     
     <div class="featured eight columns">
@@ -99,6 +100,9 @@
         
         <p>Tools and tips for organizing, publicizing, and hosting informative and respectful discussions in your community using the "Muslim Journeys" books, films, and art resources. </p>
 </p>
+
+        <p><a href="#" class="button">Learn about the toolkit</a></p>    
+
     
     </div>    
 

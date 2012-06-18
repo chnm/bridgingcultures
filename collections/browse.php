@@ -38,7 +38,7 @@ set_items_for_loop(get_items(array('type' => 'Theme Icon'),6));
                 <h3><a href="collections/show/<?php echo collection('id'); ?>"><?php echo collection('name'); ?></a></h3>
                 
                 <div class="theme-decription">
-                    <?php echo nls2p(collection('Description', array('snippet'=>150))); ?>
+                    <?php echo nls2p(collection('Description')); ?>
                 </div>
             
             </div>

@@ -256,6 +256,22 @@ footer {
     display: inline-block;
     text-align: center;
     }
+    
+#home .button {
+    width: 100%;
+    box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+    float: left;
+    color: #fff;
+    background-image: url('../img/border-bg.jpg');
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-shadow: -1px -1px 1px rgba(0,0,0,.6);
+    }
 
 #home .carousel .previous, #home .carousel .next {
     width: 18px;
@@ -328,6 +344,9 @@ footer {
     margin: 0;
     padding: 0;
     border-image: url('../img/featured-border.png') 0 2 0 2;
+        -webkit-border-image: url('../img/featured-border.png') 0 2 0 2;
+        -moz-border-image: url('../img/featured-border.png') 0 2 0 2;
+        -o-border-image: url('../img/featured-border.png') 0 2 0 2;
     border-width: 0 2px;
     }
     
@@ -423,7 +442,7 @@ footer {
     padding: 10px;
     position: absolute;
     bottom: 1px;
-    left: 1;
+    left: 1px;
     }
 
 #home .twitter, #home .toolkit {
@@ -473,6 +492,10 @@ footer {
 
 /* Browse Themes
 ----------------------------------*/
+
+#themes h3 {
+    margin-top: 1em;
+    }
 
 #themes .theme-icon {
     width: 100%;
