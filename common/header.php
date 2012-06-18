@@ -17,7 +17,7 @@
 
 <!-- Javascript -->
     <?php  
-    queue_js(array('jquery-1.7.2','jquery.carousel.min'));
+    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332'));
     display_js(); 
     ?>
     

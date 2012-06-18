@@ -7,12 +7,15 @@ body {
     
 .wrap {
     background-image:url('../img/bg.jpg');
-    border-image:url('../img/border-bg.jpg') 10 0 repeat;
-        -webkit-border-image:url('../img/border-bg.jpg') 10px 0 repeat;
-        -moz-border-image:url('../img/border-bg1.jpg') 10 0 repeat;
-        -o-border-image:url('../img/border-bg.jpg') 10 0 repeat;
-    border-width: 10px 0;
     }
+    
+    .wrap:after {
+        content: "";
+        width: 100%;
+        height: 10px;
+        display: block;
+        background-image: url('../img/border-bg.jpg');    
+        }
     
 #content {
     padding: 20px 0;    
@@ -65,15 +68,23 @@ header {
     color: #fff;
     }
     
-    header .container {
-        background:url('../img/header-bg2.jpg') no-repeat;
-        margin: 0 auto;
-        padding: 10px 0;
+    header:after {
+        content: "";
+        width: 100%;
+        height: 10px;
+        display: block;
+        background-image: url('../img/border-bg.jpg');
         }
     
-    header h1 {
-        margin: 0;
-        }
+header .container {
+    background:url('../img/header-bg2.jpg') no-repeat;
+    margin: 0 auto;
+    padding: 10px 0;
+    }
+
+header h1 {
+    margin: 0;
+    }
         
 header nav {
     float: left;
@@ -529,8 +540,8 @@ footer {
     margin: 0 20px 0 0;
     }
 
-#collections .wrap {
-    padding: 50px 0;
+#collections #content {
+    padding: 70px 0;
     }
     
 #collections h1 {
@@ -660,14 +671,14 @@ h2.essay {
     font-size: 16px;
     font-style: normal;
     }
+    
+#item #content {
+    padding: 70px 0;
+    }
 
 #item #right-content {
     word-wrap: break-word;
     }    
-
-#item .wrap {
-    padding: 50px 0;
-    }
 
 
 /* Show Item
