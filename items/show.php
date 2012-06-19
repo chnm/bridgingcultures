@@ -172,7 +172,7 @@ $currentItemId = item('id');
             
             <h3>Tags</h3>
             
-            <p><?php echo get_tags(); ?></p>
+            <p><?php echo item_tags_as_string(); ?></p>
             
             <?php endif; ?>
         
