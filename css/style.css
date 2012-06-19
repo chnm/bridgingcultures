@@ -772,6 +772,9 @@ h2.essay {
         -o-border-image: url('../img/featured-border.png') 0 2 0 0;
     border-width: 0 2px 0 0;
     box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
     padding: 0 20px 0 0;    
     }
 
