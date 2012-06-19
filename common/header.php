@@ -8,7 +8,7 @@
 <?php plugin_header(); ?>
     
 <!-- Stylesheets -->
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700,700italic|Maven+Pro' rel='stylesheet' type='text/css'>
     <?php
     queue_css(array('style','skeleton','layout'), 'screen');
 
@@ -52,7 +52,9 @@
                 
             </nav>
             
-            <?php echo simple_search(); ?>
+            <?php if(!strstr(@$bodyid, 'resources')) {
+                echo simple_search(); 
+                } ?>
         
         </div>
     

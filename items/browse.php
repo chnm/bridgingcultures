@@ -100,7 +100,7 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                     $itemTypes = array();
                     foreach($allItemTypes as $itemType) {
                         $itemsTotal = $itemType->totalItems();
-                        if($itemsTotal > 0) {
+                        if($itemsTotal > 0 && $itemType->name != 'Theme Icon') {
                             array_push($itemTypes,$itemType);
                         }
                     }
