@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'IcoMoon';
+	src: url('../fonts/IcoMoon.eot');
+	src: url('../fonts/IcoMoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/IcoMoon.svg#IcoMoon') format('svg'),
+		url('../fonts/IcoMoon.woff') format('woff'),
+		url('../fonts/IcoMoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
     background-image:url('../img/footer-bg2.jpg');
     color: #463904;
@@ -138,11 +149,26 @@ header #simple-search {
     
     header #simple-search input[type=text] {
         background-color: #973720;
-        background-color: rgba(0,0,0,.08);
+        background-color: rgba(0, 0, 0, .08);
         border: 0;
         color: #fff;
+        color: rgba(255, 255, 255, .9);
+        position: relative;
         padding: 5px;
-    }
+        margin: 30px 0 0 0;
+        font-size: 16px;
+        font-family: "Maven Pro", sans-serif;
+        }
+        
+    header #simple-search input[type=text]:after {
+    	content: "\0023";
+    	font-family: 'IcoMoon';    	
+        font-size: 20px;
+        color: rgba(255,255,255,.6);
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        }
 
 
 /* Footer
