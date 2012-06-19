@@ -2,9 +2,10 @@
 $db = get_db();
 
 if($itemTypeId = Zend_Controller_Front::getInstance()->getRequest()->getParam('type')) { 
-    $itemTypeName = $db->getTable('ItemType')->find($itemTypeId)->name;
-    if(!$itemTypeName) {
-        $itemTypeName = 'Book';
+    if(is_numeric($itemTypeId)) {
+        $itemTypeName = $db->getTable('ItemType')->find($itemTypeId)->name;
+    } else {
+        $itemTypeName = $itemTypeId;
     }
     $title = 'Browse '. $itemTypeName . 's';
 } else {
@@ -100,7 +101,7 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                     $itemTypes = array();
                     foreach($allItemTypes as $itemType) {
                         $itemsTotal = $itemType->totalItems();
-                        if($itemsTotal > 0 && $itemType->name != 'Theme Icon') {
+                        if($itemsTotal > 0) {
                             array_push($itemTypes,$itemType);
                         }
                     }

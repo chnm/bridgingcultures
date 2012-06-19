@@ -738,6 +738,32 @@ h2.essay {
     margin-top: 0;
     text-align: center;
     }
+
+#resources .item-types h3 {
+    margin-top: 0;
+    }
+    
+#resources .item-types h3:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-size: 100%;    
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 5px rgba(0,0,0,.3);
+    margin: 0 0 1em 0;
+    }
+    
+    #resources .item-types #images h3:before { background-image:url('../img/resources/images.jpeg'); }
+    #resources .item-types #texts h3:before { background-image:url('../img/resources/texts.jpeg'); }
+    #resources .item-types #websites h3:before { background-image:url('../img/resources/websites.jpeg'); }
+    #resources .item-types #audio-visual h3:before { background-image:url('../img/resources/audiovisual.jpeg'); }
+    #resources .item-types #maps h3:before { background-image:url('../img/resources/maps.jpeg'); }
+    #resources .item-types #further-reading h3:before { background-image:url('../img/resources/furtherreading.jpeg'); }
+    
     
 #resources .sidebar {
     border-image: url('../img/featured-border.png') 0 2 0 0;

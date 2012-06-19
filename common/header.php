@@ -45,7 +45,7 @@
                     <?php echo public_nav_main(array(
                         'Books' => uri('books'), 
                         'Themes'=>uri('collections'),
-                        'Resources'=>uri('items'),
+                        'Resources'=>uri('resources'),
                         'About'=>uri('about')
                     )); ?>
                 </ul>
