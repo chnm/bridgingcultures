@@ -5,7 +5,7 @@
 <?php $themeIcon = multicollections_get_items_in_collection(1,'Theme Icon');
     if($themeIcon):
         echo item_fullsize(array('class' => 'theme-icon', 'alt' => 'Collection'), 0, $themeIcon[0]);
-        echo '<p class="credit">' . item('Item Type Metadata', 'Credit', array(), $themeIcon[0]) . '</p>';
+        echo '<div class="credit">' . item('Item Type Metadata', 'Credit', array(), $themeIcon[0]) . '</div>';
     else: ?>     
         <!-- Message if there are no items -->
         <p>Theme icon missing.</p>

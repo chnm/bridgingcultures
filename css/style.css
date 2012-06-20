@@ -572,6 +572,11 @@ footer {
 #collections #content {
     padding: 70px 0;
     }
+
+#collections .credit {
+	width: 90%;
+	word-wrap: break-word;
+	}
     
 #collections h1 {
     border: 0;
