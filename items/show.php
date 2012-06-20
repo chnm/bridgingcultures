@@ -21,8 +21,9 @@ $currentItemId = item('id');
                 <?php if(item('Item Type Metadata', 'Author Biography')): ?>                
                     <li><a href="#author">About the Author</a></li>
                 <?php endif; ?>
-                <li>Reader's Guide</li>
-                <li>Links to Resources</li>
+                <?php if($resources = mj_get_related_to_book_or_essay()): ?>
+                    <li><a href="#resources">Related Resources</a></li>
+                <?php endif; ?>
             </ul>
                         
             <p id="jquery-test">&nbsp;</p>
@@ -56,7 +57,7 @@ $currentItemId = item('id');
                 
                 <?php if(item('Dublin Core', 'Description')): ?>
                 
-                    <h4><a name="summary"></a>Book Summary</h4>
+                    <h3><a name="summary"></a>Book Summary</h3>
                     
                 <?php endif; ?>
             
@@ -64,15 +65,17 @@ $currentItemId = item('id');
                 
                 <?php if(item('Item Type Metadata', 'Author Biography')): ?>
                 
-                    <h4><a name="author"></a>About the Author</h4>
+                    <h3><a name="author"></a>About the Author</h3>
                     
-                    <?php echo item('Item Type Metadata', 'Author bio'); ?>
+                    <?php echo item_thumbnail(array('class' => 'author-image'), 1); ?>
+                    
+                    <p><?php echo item('Item Type Metadata', 'Author Biography'); ?></p>
                     
                 <?php endif; ?>
                                 
-                <?php if($resources = mj_get_related_to_book_or_essay()): ?>
+                <?php if($resources): ?>
                 
-                    <h4>Resources</h4>
+                    <h3><a name="resources"></a>Related Resources</h3>
                     
                     <ul>
                 

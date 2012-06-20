@@ -5,6 +5,7 @@
 <?php $themeIcon = multicollections_get_items_in_collection(1,'Theme Icon');
     if($themeIcon):
         echo item_fullsize(array('class' => 'theme-icon', 'alt' => 'Collection'), 0, $themeIcon[0]);
+        echo '<p class="credit">' . item('Item Type Metadata', 'Credit', array(), $themeIcon[0]) . '</p>';
     else: ?>     
         <!-- Message if there are no items -->
         <p>Theme icon missing.</p>
@@ -40,7 +41,7 @@ endif;
         echo item('Dublin Core','Description');
         echo '<h2 class="author-bio">About ' . item('Dublin Core', 'Creator') .'</h2>'; 
         echo item_thumbnail(array('class'=>'author-image'));
-        echo item('Item Type Metadata','Author Biography');
+        echo '<p>' . item('Item Type Metadata','Author Biography') . '</p>';
 else:
     echo '<p>No essay for this theme.</p>';
 endif; 
