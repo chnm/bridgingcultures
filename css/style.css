@@ -90,7 +90,7 @@ header {
 header .container {
     background:url('../img/header-bg2.jpg') no-repeat;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     }
 
 header h1 {
@@ -703,6 +703,14 @@ h2.essay {
     
 #item #content {
     padding: 70px 0;
+    }
+
+#item #content ul {
+    padding: 0 0 0 1em;
+    }
+
+#item #page-menu ul {
+    margin: 1em 0;
     }
 
 #item #right-content {
