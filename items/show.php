@@ -18,7 +18,7 @@ $currentItemId = item('id');
                 <?php if(item('Dublin Core', 'Description')): ?>                
                     <li><a href="#summary">Book Summary</a></li>
                 <?php endif; ?>
-                <?php if(item('Item Type Metadata', 'Author bio')): ?>                
+                <?php if(item('Item Type Metadata', 'Author Biography')): ?>                
                     <li><a href="#author">About the Author</a></li>
                 <?php endif; ?>
                 <li>Reader's Guide</li>
@@ -62,7 +62,7 @@ $currentItemId = item('id');
             
                 <?php echo item('Dublin Core', 'Description'); ?>
                 
-                <?php if(item('Item Type Metadata', 'Author bio')): ?>
+                <?php if(item('Item Type Metadata', 'Author Biography')): ?>
                 
                     <h4><a name="author"></a>About the Author</h4>
                     
