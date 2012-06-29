@@ -25,7 +25,8 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
         <div id="books">
 
         <?php $i = 0; ?>
-    
+        <?php $books = get_items(array('type' => $itemTypeId, 'sort_field' => 'Dublin Core,Title'), 0); ?>
+        <?php set_items_for_loop($books); ?>
 		<?php while (loop_items()): ?>
 		
             <?php $i++; ?>

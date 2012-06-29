@@ -26,9 +26,7 @@ $currentItemId = item('id');
                     <li><a href="#resources">Related Resources</a></li>
                 <?php endif; ?>
             </ul>
-                        
-            <p id="jquery-test">&nbsp;</p>
-        
+                                
         </nav>
         
         <div id="right-content" class="nine columns">
