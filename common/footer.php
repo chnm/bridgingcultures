@@ -10,7 +10,7 @@
         
             <a href="http://www.neh.gov" target="_blank"><img src="<?php echo img('neh.png', 'img'); ?>" alt="National Endowment for the Humanities" /></a>
             
-            <a href="http://www.lsa.umich.edu/cgis/" target="_blank"><img src="<?php echo img('cgis.png', 'img'); ?>" alt="Center for Global and Intercultural Study" /></a>
+            <a href="http://islamicstudiescenter.gmu.edu/" target="_blank"><img src="<?php echo img('cgis.png', 'img'); ?>" alt="Center for Global and Intercultural Study" /></a>
             
         </div>
         
