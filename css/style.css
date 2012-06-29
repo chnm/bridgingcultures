@@ -591,8 +591,12 @@ footer {
 #collections .credit {
 	width: 90%;
 	word-wrap: break-word;
-	font-size: 12px;
+    font-size: 12px;
 	font-style: italic;
+	}
+	
+	#collections .credit p {
+        font-size: 12px;
 	}
     
 #collections h1 {
