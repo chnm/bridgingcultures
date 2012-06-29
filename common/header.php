@@ -10,14 +10,14 @@
 <!-- Stylesheets -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700,700italic|Maven+Pro' rel='stylesheet' type='text/css'>
     <?php
-    queue_css(array('style','skeleton','layout'), 'screen');
+    queue_css(array('style','skeleton','layout', 'jquery.fancybox'), 'screen');
 
     display_css();
     ?>    
 
 <!-- Javascript -->
     <?php  
-    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332'));
+    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332', 'jquery.fancybox.pack' ));
     display_js(); 
     ?>
     
@@ -26,6 +26,12 @@
         $("div.books").carousel( { dispItems: 9, effect: "fade" } );
     });
     </script>
+    
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		$(".fancybox").fancybox();
+    	});
+    </script>    
     
 </head>
 
