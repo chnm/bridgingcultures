@@ -6,7 +6,9 @@ $currentItemId = item('id');
 
         <nav id="page-menu" class="four columns offset-by-one alpha">
         
-            <?php if(($fullsizeHtml = item_fullsize(array('class'=>'book-image')))):
+            <?php 
+            $imageFile = get_db()->getTable('File')->findWithImages($item->id, 0);
+            if(($fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize' ), array('class'=>'book-image'))):
                 echo $fullsizeHtml;
                 
             else:
