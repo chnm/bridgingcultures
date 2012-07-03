@@ -17,7 +17,7 @@
 
 <!-- Javascript -->
     <?php  
-    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332', 'jquery.fancybox.pack' ));
+    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332', 'jquery.fancybox.pack', 'jquery.cookie', 'jquery.dcjqaccordion.2.9', 'jquery.hoverIntent.minified'));
     display_js(); 
     ?>
     
@@ -28,9 +28,15 @@
     </script>
     
     <script type="text/javascript">
-    	$(document).ready(function() {
-    		$(".fancybox").fancybox();
-    	});
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+    </script>    
+    
+    <script type="text/javascript">    
+    $(document).ready(function($) {
+        $('#accordion').dcAccordion();
+    });
     </script>    
     
 </head>

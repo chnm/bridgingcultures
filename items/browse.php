@@ -71,8 +71,8 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
     
         <h2>Browse by</h2>
         
-        <ul>
-            <li>Time Period
+        <ul id="accordion" class="menu">
+            <li><a href="#" class="top">Time Period</a>
                 <?php 
                     $timePeriodId = $db->getTable('Element')->findByElementSetNameAndElementName('Item Type Metadata', 'Time Period')->id;   
                     $timePeriodTexts = explode("\n", $db->getTable('SimpleVocabTerm')->findByElementId($timePeriodId)->terms);
@@ -85,7 +85,7 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                     }   
                 ?>                
             </li>
-            <li>Theme
+            <li><a href="#" class="top">Theme</a>
                 <?php $collections = get_collections(); 
                 set_collections_for_loop($collections);
                 echo '<ul class="sub-menu">';
@@ -96,7 +96,7 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                 echo '</ul>';
                 ?>
             </li>
-            <li>Item Type
+            <li><a href="#" class="top">Item Type</a>
                 <?php 
                     $allItemTypes = get_item_types();
                     $itemTypes = array();
@@ -117,7 +117,7 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                     echo '</ul>';
                     endif; ?>
             </li>
-            <li>Region
+            <li><a href="#" class="top">Region</a>
                 <?php 
                     $regionId = $db->getTable('Element')->findByElementSetNameAndElementName('Item Type Metadata', 'Region')->id;   
                     $regionTexts = explode("\n", $db->getTable('SimpleVocabTerm')->findByElementId($regionId)->terms);

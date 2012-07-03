@@ -92,6 +92,7 @@ header {
         }
     
 header .container {
+    height: 74px;
     background:url('../img/header-bg2.jpg') no-repeat;
     margin: 0 auto;
     padding: 10px 0 0 0;
@@ -711,11 +712,11 @@ h2.essay {
     
 #item .book-image {
     max-width: 80%;
-    border: 1px solid rgba(0,0,0,.25);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
         -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
         -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
         -o-box-shadow: 0 0 10px rgba(0,0,0,.3);    
+    display: inline-block;
     }
     
     #item .book-image img {
@@ -918,6 +919,21 @@ h2.essay {
 
 /* Browse Resources
 ----------------------------------*/
+
+#items #accordion li a.top:after {
+    content: "";
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #AC3F13;
+    border-bottom: 5px solid transparent;
+    margin: 0 0 0 10px;
+}
+
+#items #accordion li a.top.active:after {
+    transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+}
 
 #items #filter-list {
     border-bottom: 1px solid rgba(255,255,255, .6);
