@@ -99,8 +99,9 @@ $currentItemId = item('id');
         <nav id="page-menu" class="five columns offset-by-one alpha">
         
             <?php 
-            $imageFile = get_db()->getTable('File')->findWithImages($item->id, 0);
-            if(($fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'fancybox book-image' )), array('class' => 'book-image')))):
+            
+            if($imageFile = get_db()->getTable('File')->findWithImages($item->id, 0)):
+                $fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'fancybox book-image' )), array('class' => 'book-image'));
                 echo $fullsizeHtml;
                 
             else:
