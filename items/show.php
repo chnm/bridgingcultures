@@ -8,7 +8,7 @@ $currentItemId = item('id');
         
             <?php 
             $imageFile = get_db()->getTable('File')->findWithImages($item->id, 0);
-            if(($fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'fancybox book-image' )), array('class' => 'book-image')))):
+            if(($fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'lightbox book-image', 'data-ob' => 'lightbox')), array('class' => 'book-image')))):
                 echo $fullsizeHtml;
             else:
                 echo '<p class="no-image">No book cover.</p>';
@@ -101,16 +101,20 @@ $currentItemId = item('id');
             <?php 
             
             if($imageFile = get_db()->getTable('File')->findWithImages($item->id, 0)):
-                $fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'fancybox book-image' )), array('class' => 'book-image'));
+                $fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'fancybox book-image', 'data-ob' => 'lightbox' )), array('class' => 'book-image'));
                 echo $fullsizeHtml;
-                
+            elseif(item_has_files()):
+                echo display_files_for_item(
+        		    array(
+        		      'linkToFile' => true,
+    		          'linkAttributes' => array('data-ob_iframe' => true, 'data-ob' => 'lightbox')
+        		    )
+        		);
             else:
                 echo '<p class="no-image">No image.</p>';
             
             endif; ?>
-                                    
-            <p id="jquery-test">&nbsp;</p>
-            
+                                                
             <h4>Related Books</h4>
             
             <?php if($relatedBooks = mj_get_related_items()): 

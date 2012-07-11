@@ -96,7 +96,7 @@
     
     <div class="toolkit four columns omega">
     
-        <h3>Conversation Toolkits</h3>
+        <h3>Conversation Toolkit</h3>
         
         <p>Tools and tips for organizing, publicizing, and hosting informative and respectful discussions in your community using the "Muslim Journeys" books, films, and art resources. </p>
 </p>

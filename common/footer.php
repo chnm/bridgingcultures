@@ -6,11 +6,11 @@
     
         <div class="twelve columns">
         
-            <a href="http://www.neh.gov/divisions/bridging-cultures" target="_blank"><img src="<?php echo img('bc.png', 'img'); ?>" alt="Bridging Cultures Intitiative" /></a>
+            <a href="http://www.neh.gov/divisions/bridging-cultures" target="_blank"><img src="<?php echo img('bc.png'); ?>" alt="Bridging Cultures Intitiative" /></a>
         
-            <a href="http://www.neh.gov" target="_blank"><img src="<?php echo img('neh.png', 'img'); ?>" alt="National Endowment for the Humanities" /></a>
+            <a href="http://www.neh.gov" target="_blank"><img src="<?php echo img('neh.png'); ?>" alt="National Endowment for the Humanities" /></a>
             
-            <a href="http://islamicstudiescenter.gmu.edu/" target="_blank"><img src="<?php echo img('cgis.png', 'img'); ?>" alt="Center for Global and Intercultural Study" /></a>
+            <a href="http://islamicstudiescenter.gmu.edu/" target="_blank"><img src="<?php echo img('cgis.png'); ?>" alt="Center for Global and Intercultural Study" /></a>
             
         </div>
         

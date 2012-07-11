@@ -3,21 +3,18 @@
 <meta charset="UTF-8">
 <head>
     <title>Bridging Cultures Bookshelf: Muslim Journeys</title>
-
-<!-- Plugin Stuff -->
-<?php plugin_header(); ?>
     
 <!-- Stylesheets -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700,700italic|Maven+Pro' rel='stylesheet' type='text/css'>
     <?php
-    queue_css(array('style','skeleton','layout', 'jquery.fancybox'), 'screen');
-
-    display_css();
+    queue_css(array('style','skeleton','layout', 'orangebox'), 'screen');
+    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332', 'orangebox.min', 'jquery.cookie', 'jquery.dcjqaccordion.2.9', 'jquery.hoverIntent.minified'));
     ?>    
 
 <!-- Javascript -->
     <?php  
-    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332', 'jquery.fancybox.pack', 'jquery.cookie', 'jquery.dcjqaccordion.2.9', 'jquery.hoverIntent.minified'));
+    plugin_header();
+    display_css();
     display_js(); 
     ?>
     
@@ -25,12 +22,10 @@
     $(function(){
         $("div.books").carousel( { dispItems: 9, effect: "fade" } );
     });
-    </script>
+    </script> 
     
     <script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
-	});
+        oB.settings.addThis = false;
     </script>    
     
     <script type="text/javascript">    
