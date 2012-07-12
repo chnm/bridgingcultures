@@ -141,16 +141,16 @@ header .advanced-search-link {
     float: right;
 }
     
-header #simple-search {
+header .simple-search {
     float: right;
     position: relative;
     }
 
-    header #simple-search fieldset {
+    header .simple-search fieldset {
         border: 0;
     }
     
-    header #simple-search input[type=submit] {
+    header .simple-search input[type=submit] {
         width: 17px;
         height: 18px;
         background:url('../images/search-icon.png') no-repeat;
@@ -162,7 +162,7 @@ header #simple-search {
         text-indent: -999px;
     }
     
-    header #simple-search input[type=text] {
+    header .simple-search input[type=text] {
         background-color: #973720;
         background-color: rgba(0, 0, 0, .08);
         border: 0;
@@ -175,7 +175,7 @@ header #simple-search {
         font-family: "Maven Pro", sans-serif;
         }
         
-    header #simple-search input[type=text]:after {
+    header .simple-search input[type=text]:after {
     	content: "\0023";
     	font-family: 'IcoMoon';    	
         font-size: 20px;
@@ -900,16 +900,16 @@ h2.essay {
     margin: 0;
     }
     
-#resources #simple-search {
+#resources #content .simple-search {
     text-align: center;
     }
 
-#resources #simple-search fieldset {
+#resources #content .simple-search fieldset {
     border: 0;
     margin: auto;
     }
     
-#resources #simple-search input[type=text] {
+#resources #content .simple-search input[type=text] {
     width: 70%;
     border: 1px solid #DCD4B4;
     box-shadow: inset 0 0 10px #EFEDE7;
@@ -920,7 +920,7 @@ h2.essay {
     vertical-align: top;
     }
 
-#resources #simple-search input[type=submit] {
+#resources #content .simple-search input[type=submit] {
     background-image:url('../images/border-bg.jpg');
     border: 2px solid rgba(0,0,0,.2);
     border-radius: 3px;

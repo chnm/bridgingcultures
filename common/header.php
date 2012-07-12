@@ -59,7 +59,7 @@
                 
                 <ul>
                     <?php echo public_nav_main(array(
-                        'Books' => uri('books'), 
+                        'Bookshelf' => uri('books'), 
                         'Themes'=>uri('collections'),
                         'Resources'=>uri('resources'),
                         'About'=>uri('about')
@@ -68,9 +68,7 @@
                 
             </nav>
             
-            <?php if(!strstr(@$bodyid, 'resources')) {
-                echo simple_search(); 
-                } ?>
+            <?php echo bc_simple_search(); ?>
         
         </div>
     

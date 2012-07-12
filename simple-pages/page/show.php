@@ -15,7 +15,7 @@ if (simple_pages_is_home_page(get_current_simple_page())) {
     <h1><?php echo simple_page('title'); ?></h1>
     <p><?php echo eval('?>' . simple_page('text')); ?></p>
     
-    <?php echo simple_search(); ?>
+    <?php echo bc_simple_search(); ?>
 
 </div>
     
