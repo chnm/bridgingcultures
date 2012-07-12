@@ -788,6 +788,23 @@ h2.essay {
     margin: 0 0 1em 0;
     padding: 60% 5%;
     }
+    
+#item #right-content ul.simplePagerNav, #item #right-content .simplePagerContainer p  {
+    display: inline-block;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+    #item #right-content ul.simplePagerNav li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0 10px;
+    }
+    
+    #item #right-content ul.simplePagerNav li.currentPage {
+        font-weight: bold;
+    }
+
 
 
     
