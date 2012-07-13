@@ -34,7 +34,23 @@ endif;
 
     <h1><?php echo __('Theme: ' . collection('name')) ?></h1>
 
-<?php if($multiItems = multicollections_get_items_in_collection(1, 'Essay')):
+<?php if($essay = multicollections_get_items_in_collection(1, 'Essay')):
+
+    set_current_item($essay[0]);
+    if(item_has_files()):
+        while(loop_files_for_item()):
+            if(item_file('MIME Type') == 'application/pdf'):
+                echo '<p><a href="' . item_file('uri') . '" class="theme-pdf">Read the full essay for the theme (PDF)</a></p>';
+            endif;
+        endwhile;
+    endif;
+    echo '<p>' . link_to_item( 'Read the full essay for the theme (HTML)', array('class' => 'theme-essay')) . '</p>'; 
+    
+?>
+
+<?php endif; ?>
+
+<?php if($multiItems = multicollections_get_items_in_collection(1, 'Theme Introduction')):
         set_current_item($multiItems[0]);                            
         echo '<h2 class="essay">'.item('Dublin Core','Title').'</h2>';
         echo '<p class="essay-author">by '.item('Dublin Core','Creator').'</p>';

@@ -661,6 +661,17 @@ h2.essay {
     margin: 0;
     }
     
+#collections .theme-pdf:before, #collections .theme-essay:before {
+    width: 16px;
+    height: 16px;
+    content: "";
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+    #collections .theme-pdf:before { background-image: url('../images/page_white_acrobat.png'); }
+    #collections .theme-essay:before { background-image: url('../images/page_white_world.png'); }
+    
 #collections .icon-credit {
     font-style: italic;
     }    
@@ -956,6 +967,7 @@ h2.essay {
     border: 2px solid rgba(0,0,0,.2);
     border-radius: 3px;
     color: #F2F0E4;
+    float: none;
     font-family: "Maven Pro", sans-serif;
     font-size: 20px;
     margin: 0 0 0 -10px;
