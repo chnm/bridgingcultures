@@ -26,7 +26,10 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
 
         <?php $i = 0; ?>
         <?php $books = get_items(array('type' => $itemTypeId, 'sort_field' => 'Dublin Core,Title'), 0); ?>
-        <?php set_items_for_loop($books); ?>
+        <?php $otherTypes = get_items(array('tags' => 'bookshelf', 'sort_field' => 'Dublin Core,Title'),0) ?>
+        <?php $all = array_merge($books,$otherTypes); ?>
+        <?php set_items_for_loop($all); ?>
+        
 		<?php while (loop_items()): ?>
 		
             <?php $i++; ?>
