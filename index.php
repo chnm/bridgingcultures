@@ -47,22 +47,28 @@
     <div class="books carousel">
     
     <?php
-        set_items_for_loop(get_items(array('type' => 'Book'),30));
-        ?>
-        <?php if(has_items_for_loop()): ?>
-            <ul>
-           <!-- Loop for items -->
-            <?php while(loop_items()): ?>
-                <?php                                   
-                    echo '<li>' . link_to_item(item_fullsize(array('class' => 'book-cover', 'alt' => strip_tags(item('Dublin Core', 'Title'))))) . '</li>';
-                ?>            
-            <?php endwhile; ?>
-            </ul>
-         
-            <?php else: ?>         
-                <!-- Message if there are no items -->
-                <p>Books missing.</p>
-            <?php endif; ?>
+        $bookItems = get_items(array('type' => 'Book'),30);
+        $otherItems = get_items(array('tags' => 'bookshelf'),30);
+        $carouselItems = array_merge($bookItems,$otherItems);
+        set_items_for_loop($carouselItems);
+    ?>
+    <?php if(has_items_for_loop()): ?>
+        <ul>
+       <!-- Loop for items -->
+        <?php 
+        $i = 0;
+        while(loop_items()): ?>
+            <?php                                   
+                $i++;
+                echo '<li>' . link_to_item(item_fullsize(array('class' => 'book-cover', 'alt' => $i . ') ' . strip_tags(item('Dublin Core', 'Title'))))) . '</li>';
+            ?>            
+        <?php endwhile; ?>
+        </ul>
+     
+        <?php else: ?>         
+            <!-- Message if there are no items -->
+            <p>Books missing.</p>
+        <?php endif; ?>
     		
     </div>
 

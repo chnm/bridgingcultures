@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700,700italic|Maven+Pro' rel='stylesheet' type='text/css'>
     <?php
     queue_css(array('style','skeleton','layout', 'orangebox'), 'screen');
-    queue_js(array('jquery-1.7.2','jquery.carousel.min', 'modernizr.custom.71332', 'orangebox.min', 'jquery.cookie', 'jquery.dcjqaccordion.2.9', 'jquery.hoverIntent.minified', 'quickpager.jquery'));
+    queue_js(array('jquery-1.7.2','jquery.carousel.ms.min', 'modernizr.custom.71332', 'orangebox.min', 'jquery.cookie', 'jquery.dcjqaccordion.2.9', 'jquery.hoverIntent.minified', 'quickpager.jquery'));
     ?>    
 
 <!-- Javascript -->
@@ -20,7 +20,7 @@
     
     <script type="text/javascript">
     $(function(){
-        $("div.books").carousel( { dispItems: 9, effect: "fade" } );
+        $("div.books").carousel( { dispItems: 8, effect: "fade", horizontalMargin: 5 } );
     });
     </script> 
     
