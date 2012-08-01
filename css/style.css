@@ -846,7 +846,15 @@ h2.essay {
     #item #right-content ul.simplePagerNav li.currentPage {
         font-weight: bold;
     }
+    
+#item #video {
+    display: none;
+}
 
+#item .video-preview img {
+    max-width: 85%;
+    height: auto;
+}
 
 
     

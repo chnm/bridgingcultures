@@ -158,16 +158,27 @@ $currentItemId = item('id');
         
             <?php 
             
+            $videoTypes = array('video/avi','video/divx','video/mp4','video/mpeg','video/msvideo','video/ogg','video/quicktime','video/x-ms-wmv','video/x-msvideo');
+            
             if($imageFile = get_db()->getTable('File')->findWithImages($item->id, 0)):
                 $fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'lightbox book-image', 'data-ob' => 'lightbox' )), array('class' => 'book-image'));
                 echo $fullsizeHtml;
             elseif(item_has_files()):
-                echo display_files_for_item(
-        		    array(
-        		      'linkToFile' => true,
-    		          'linkAttributes' => array('data-ob_iframe' => true, 'data-ob' => 'lightbox')
-        		    )
-        		);
+                foreach($item->Files as $file) {
+                    if(array_search($file->getMimeType(), $videoTypes) !== false) {
+                        echo '<a href="#video" data-ob="lightbox" data-ob_width="640" class="video-preview"><img src="' . uri('themes/muslimjourneys/images/audio.jpg') . '"></a>';
+                        echo '<div id="video">';
+                        echo display_files_for_item(
+                		    array(
+                		      'linkToFile' => true,
+            		          'linkAttributes' => array('data-ob_iframe' => true, 'data-ob' => 'lightbox'),
+            		          'width' => 600
+                		    )
+                		);                        
+                        echo '</div>';
+                    }
+                }
+
             else:
                 echo '<p class="no-image">No image.</p>';
             

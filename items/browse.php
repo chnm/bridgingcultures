@@ -25,9 +25,20 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
         <div id="books">
 
         <?php $i = 0; ?>
-        <?php $books = get_items(array('type' => $itemTypeId, 'sort_field' => 'Dublin Core,Title'), 0); ?>
-        <?php $otherTypes = get_items(array('tags' => 'bookshelf', 'sort_field' => 'Dublin Core,Title'),0) ?>
+        <?php $books = get_items(array('type' => $itemTypeId), 0); ?>
+        <?php $otherTypes = get_items(array('tags' => 'bookshelf'),0) ?>
         <?php $all = array_merge($books,$otherTypes); ?>
+        
+        <?php 
+        
+        function cmp($a, $b) {
+            return strcmp(item('Dublin Core','Title', array(), $a), item('Dublin Core','Title', array(), $b));    
+        } 
+        
+        usort($all, "cmp");
+        
+        ?>
+        
         <?php set_items_for_loop($all); ?>
         
 		<?php while (loop_items()): ?>
