@@ -847,7 +847,7 @@ h2.essay {
         font-weight: bold;
     }
     
-#item #video {
+#item #video, #item #audio {
     display: none;
 }
 
