@@ -61,10 +61,19 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                     	</div>
                     <?php endif; ?>
                     
-                    <p class="three columns omega"><?php echo link_to_item(
-                        '<span class="book-title">' . item('Dublin Core', 'Title') . '</span><br>' . 
-                        item('Dublin Core', 'Creator'), 				    
-                        array('class'=>'permalink')); ?></p>
+                    <p class="three columns omega">
+                    <?php if(count(item('Dublin Core', 'Title', array('all' => true))) > 1): ?>
+                        <?php echo link_to_item(
+                            '<span class="book-title">' . item('Dublin Core', 'Title', array('index' => 1)) . '</span><br>' . 
+                            item('Dublin Core', 'Creator'), 				    
+                            array('class'=>'permalink')); ?>
+                    <?php else: ?>
+                        <?php echo link_to_item(
+                            '<span class="book-title">' . item('Dublin Core', 'Title') . '</span><br>' . 
+                            item('Dublin Core', 'Creator'), 				    
+                            array('class'=>'permalink')); ?>
+                    <?php endif; ?>                    
+                    </p>
                     				
                     </div><!-- end class="book-meta" -->
                 </div><!-- end class="book" -->

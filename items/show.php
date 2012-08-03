@@ -22,6 +22,7 @@ $currentItemId = item('id');
                 <?php if(item('Item Type Metadata', 'Author Biography')): ?>                
                     <li><a href="#author">About the Author</a></li>
                 <?php endif; ?>
+                    <li><a href="#annotation">Annotation</a></li>
                 <?php if($resources = mj_get_related_to_book_or_essay()): ?>
                     <li><a href="#resources">Related Resources</a></li>
                 <?php endif; ?>
@@ -49,7 +50,11 @@ $currentItemId = item('id');
                 } ?>
             <?php endif; ?>
             </h3>
+            <?php if(count(item('Dublin Core', 'Title', array('all' => true) > 1))): ?>
+            <h2 class="book-title"><?php echo item('Dublin Core', 'Title', array('index' => 1)); ?><br>
+            <?php else: ?>
             <h2 class="book-title"><?php echo item('Dublin Core', 'Title'); ?><br>
+            <?php endif; ?>
             <span class="book-author">by <?php echo item('Dublin Core', 'Creator'); ?></span></h2>
             
             <div class="book summary">
@@ -71,6 +76,27 @@ $currentItemId = item('id');
                     <p><?php echo item('Item Type Metadata', 'Author Biography'); ?></p>
                     
                 <?php endif; ?>
+                
+                <h3 <a name="annotation"></a>Annotation</h3>
+                
+                <?php echo item('Item Type Metadata', 'Text'); ?>
+                
+                <p>Region: <?php echo item('Item Type Metadata', 'Region'); ?></p>
+                
+                <p>Time Period: <?php echo item('Item Type Metadata', 'Time Period'); ?></p>
+                                
+                <h3>How to Cite This Source</h3>
+                
+                <p>"Muslim Journeys | Item #<?php echo item('id'); ?>: <?php echo item('Dublin Core', 'Title'); ?>", <?php echo date('F d, Y'); ?> <?php echo item('permalink'); ?>.</p>
+                
+                <?php if(item_has_tags()): ?>
+                
+                <h3>Tags</h3>
+                
+                <p><?php echo item_tags_as_string(); ?></p>
+                
+                <?php endif; ?>
+                
                                 
                 <?php if($resources): ?>
                 
