@@ -159,7 +159,7 @@ $currentItemId = item('id');
             <?php 
             
             $audioTypes = array('audio/aac','audio/aiff','audio/mid','audio/midi','audio/mp3','audio/mp4','audio/mpeg','audio/mpeg3','audio/ogg','audio/wav','audio/wma','audio/x-aac','audio/x-aiff','audio/x-midi','audio/x-mp3','audio/x-mp4','audio/x-mpeg','audio/x-mpeg3','audio/x-mpegaudio','audio/x-ms-wax','audio/x-realaudio','audio/x-wav','audio/x-wma');
-            $videoTypes = array('video/avi','video/divx','video/mp4','video/mpeg','video/msvideo','video/ogg','video/quicktime','video/x-ms-wmv','video/x-msvideo');
+            $videoTypes = array('video/avi','video/divx','video/mp4','video/mpeg','video/msvideo','video/ogg','video/quicktime','video/x-ms-wmv','video/x-msvideo', 'video/m4v');
             
             if($imageFile = get_db()->getTable('File')->findWithImages($item->id, 0)):
                 $fullsizeHtml = display_file($imageFile, array('imageSize' => 'fullsize', 'linkAttributes' => array('class' => 'lightbox book-image', 'data-ob' => 'lightbox' )), array('class' => 'book-image'));
