@@ -848,7 +848,13 @@ h2.essay {
     }
     
 #item #video, #item #audio {
-    display: none;
+    position: absolute;
+    left: -9999px;
+}
+
+#item #ob_inline #video, #item #ob_inline #audio {
+    position: relative;
+    left: 0;
 }
 
 #item .video-preview img {

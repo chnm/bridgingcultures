@@ -26,6 +26,7 @@
     
     <script type="text/javascript">
         oB.settings.addThis = false;
+        oB.settings.contentMinSize = [50,100];
     </script>    
     
     <script type="text/javascript">    

@@ -87,7 +87,7 @@ $currentItemId = item('id');
                                 
                 <h3>How to Cite This Source</h3>
                 
-                <p>"Muslim Journeys | Item #<?php echo item('id'); ?>: <?php echo item('Dublin Core', 'Title'); ?>", <?php echo date('F d, Y'); ?> <?php echo item('permalink'); ?>.</p>
+                <p>"Muslim Journeys | Item #<?php echo item('id'); ?>: <?php echo item('Dublin Core', 'Title', array('index' => 1)); ?>", <?php echo date('F d, Y'); ?> <?php echo item('permalink'); ?>.</p>
                 
                 <?php if(item_has_tags()): ?>
                 
