@@ -81,9 +81,11 @@ $currentItemId = item('id');
                 
                 <?php echo item('Item Type Metadata', 'Text'); ?>
                 
-                <p>Region: <?php echo item('Item Type Metadata', 'Region'); ?></p>
+                <p><strong>Region: </strong>
+                <?php echo item('Item Type Metadata', 'Region', array('delimiter' => ', ')); ?></p>
                 
-                <p>Time Period: <?php echo item('Item Type Metadata', 'Time Period'); ?></p>
+                <p><strong>Time Period: </strong>
+                <?php echo item('Item Type Metadata', 'Time Period', array('delimiter' => ', ')); ?></p>
                                 
                 <h3>How to Cite This Source</h3>
                 
@@ -269,9 +271,9 @@ $currentItemId = item('id');
                 <?php echo item('Item Type Metadata', 'Text'); ?>
             <?php endif; ?>
             
-            <p><strong>Region:</strong> <?php echo item('Item Type Metadata', 'Region'); ?></p>
+            <p><strong>Region:</strong> <?php echo item('Item Type Metadata', 'Region', array('delimiter' => ', ')); ?></p>
             
-            <p><strong>Time Period:</strong> <?php echo item('Item Type Metadata', 'Time Period'); ?></p>
+            <p><strong>Time Period:</strong> <?php echo item('Item Type Metadata', 'Time Period', array('delimiter' => ', ')); ?></p>
             
             <?php if(item('Dublin Core', 'Source')): ?>
 
