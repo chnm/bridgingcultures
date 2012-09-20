@@ -50,7 +50,7 @@ $currentItemId = item('id');
                 } ?>
             <?php endif; ?>
             </h3>
-            <?php if(count(item('Dublin Core', 'Title', array('all' => true) > 1))): ?>
+            <?php if(count(item('Dublin Core', 'Title', array('all' => true))) > 1): ?>
             <h2 class="book-title"><?php echo item('Dublin Core', 'Title', array('index' => 1)); ?><br>
             <?php else: ?>
             <h2 class="book-title"><?php echo item('Dublin Core', 'Title'); ?><br>
