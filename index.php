@@ -5,7 +5,7 @@
     
         <h1>Explore the Muslim Journeys Bookshelf</h1>
         
-        <p>Welcome to the "Muslim Journeys" website, offering resources for exploring new and diverse perspectives on the people, places, histories, beliefs, and cultures of Muslims around the world, including those within the United States.  Start your journey by choosing a theme or a book. </p>
+        <p>Welcome to the "Muslim Journeys" website, offering resources for exploring new and diverse perspectives on the people, places, histories, beliefs, and cultures of Muslims in the United States and around the world.  Start your journey by choosing a theme or a book. </p>
     
     </div>
     
