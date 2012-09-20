@@ -77,7 +77,7 @@ $currentItemId = item('id');
                     
                 <?php endif; ?>
                 
-                <h3 <a name="annotation"></a>Annotation</h3>
+                <h3><a name="annotation"></a>Annotation</h3>
                 
                 <?php echo item('Item Type Metadata', 'Text'); ?>
                 
@@ -258,8 +258,10 @@ $currentItemId = item('id');
             set_current_item(get_item_by_id($currentItemId));
             ?>            
             <h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
-                        
-            <h3>Annotation</h3>
+            
+            <?php if (!item_has_type('Further Reading')): ?>
+                <h3>Annotation</h3>
+            <?php endif; ?>
             
             <?php echo item('Item Type Metadata', 'Text'); ?>
             
@@ -267,9 +269,13 @@ $currentItemId = item('id');
             
             <p>Time Period: <?php echo item('Item Type Metadata', 'Time Period'); ?></p>
             
-            <h3>Source</h3>
-            
-            <p><?php echo item('Dublin Core', 'Source'); ?></p>
+            <?php if(item('Dublin Core', 'Source')): ?>
+
+                <h3>Source</h3>
+                
+                <p><?php echo item('Dublin Core', 'Source'); ?></p>
+                
+            <?php endif; ?>
             
             <h3>How to Cite This Source</h3>
             
