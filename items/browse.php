@@ -41,8 +41,8 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
         
         <?php set_items_for_loop($all); ?>
         
-		<?php while (loop_items()): ?>
-		
+        <?php while (loop_items()): ?>
+        
             <?php $i++; ?>
             
             <?php if(($i%3) === 1 || $i === 1) : ?>
@@ -50,31 +50,31 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
             <div class="row">
                 
             <?php endif; ?>
-		
+        
                 <div class="book five columns">        
             
                     <div class="book-meta">
                 
                     <?php if (item_fullsize()): ?>
-                    	<div class="book-thumbnail two columns alpha">
-                    	<?php echo link_to_item(item_fullsize()); ?>						
-                    	</div>
+                        <div class="book-thumbnail two columns alpha">
+                        <?php echo link_to_item(item_fullsize()); ?>                        
+                        </div>
                     <?php endif; ?>
                     
                     <p class="three columns omega">
                     <?php if(count(item('Dublin Core', 'Title', array('all' => true))) > 1): ?>
                         <?php echo link_to_item(
                             '<span class="book-title">' . item('Dublin Core', 'Title', array('index' => 1)) . '</span><br>' . 
-                            item('Dublin Core', 'Creator'), 				    
+                            item('Dublin Core', 'Creator'),                     
                             array('class'=>'permalink')); ?>
                     <?php else: ?>
                         <?php echo link_to_item(
                             '<span class="book-title">' . item('Dublin Core', 'Title') . '</span><br>' . 
-                            item('Dublin Core', 'Creator'), 				    
+                            item('Dublin Core', 'Creator'),                     
                             array('class'=>'permalink')); ?>
                     <?php endif; ?>                    
                     </p>
-                    				
+                                    
                     </div><!-- end class="book-meta" -->
                 </div><!-- end class="book" -->
             
@@ -84,10 +84,10 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                 
             <?php endif; ?>
                         
-		<?php endwhile; ?>
-		
-		</div>
-		    
+        <?php endwhile; ?>
+        
+        </div>
+            
     <?php else: ?>
         
     <div id="page-menu" class="three columns alpha">
@@ -125,7 +125,7 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
                     $itemTypes = array();
                     foreach($allItemTypes as $itemType) {
                         $itemsTotal = $itemType->totalItems();
-                        if($itemsTotal > 0) {
+                        if($itemsTotal > 0 && $itemType->name !== "Theme Icon" && $itemType->name !== "Theme Introduction") {
                             array_push($itemTypes,$itemType);
                         }
                     }
@@ -162,52 +162,52 @@ head(array('title'=>$title,'bodyid'=>'items','bodyclass' => 'browse')); ?>
     <?php bc_display_filters(); ?>    
     
             
-		<?php while (loop_items()): ?>
-		
-			<div class="item row">
+        <?php while (loop_items()): ?>
+        
+            <div class="item row">
 
-				<div class="item-meta">
-				
-				    <div class="ten columns alpha">
-				    
-    			    	<h2><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h2>
-    			    	
-    			    	<?php if ($text = item('Item Type Metadata', 'Text', array('snippet'=>250))): ?>
-        		    		<div class="item-description">
-        		    		<p><?php echo $text; ?></p>
-        		    		</div>
-    			    	<?php elseif ($description = item('Dublin Core', 'Description', array('snippet'=>250))): ?>
-        		    		<div class="item-description">
-        		    		<p><?php echo $description; ?></p>
-        		    		</div>
-    			    	<?php endif; ?>
+                <div class="item-meta">
+                
+                    <div class="ten columns alpha">
                     
-    			    	<?php if (item_has_tags()): ?>
-        		    		<div class="tags"><p><strong>Tags:</strong>
-        		    		<?php echo item_tags_as_string(); ?></p>
-        		    		</div>
-    			    	<?php endif; ?>
-    			    	
-				    </div>
+                        <h2><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h2>
+                        
+                        <?php if ($text = item('Item Type Metadata', 'Text', array('snippet'=>250))): ?>
+                            <div class="item-description">
+                            <p><?php echo $text; ?></p>
+                            </div>
+                        <?php elseif ($description = item('Dublin Core', 'Description', array('snippet'=>250))): ?>
+                            <div class="item-description">
+                            <p><?php echo $description; ?></p>
+                            </div>
+                        <?php endif; ?>
+                    
+                        <?php if (item_has_tags()): ?>
+                            <div class="tags"><p><strong>Tags:</strong>
+                            <?php echo item_tags_as_string(); ?></p>
+                            </div>
+                        <?php endif; ?>
+                        
+                    </div>
                     
                     <div class="three columns omega">
-				    
-    				    <?php if (item_has_thumbnail()): ?>
-        			    	<div class="item-thumbnail">
-        			    	<?php echo link_to_item(item_square_thumbnail()); ?>						
-        			    	</div>
-    				    <?php endif; ?>
-    				    				    
-				    </div>				
-				
-    				<?php echo plugin_append_to_items_browse_each(); ?>
+                    
+                        <?php if (item_has_thumbnail()): ?>
+                            <div class="item-thumbnail">
+                            <?php echo link_to_item(item_square_thumbnail()); ?>                        
+                            </div>
+                        <?php endif; ?>
+                                            
+                    </div>                
+                
+                    <?php echo plugin_append_to_items_browse_each(); ?>
 
-				</div><!-- end class="item-meta" -->
+                </div><!-- end class="item-meta" -->
 
-			</div><!-- end class="item row" -->
-			
-		<?php endwhile; ?>
-		
+            </div><!-- end class="item row" -->
+            
+        <?php endwhile; ?>
+        
     </div>
     
     <?php endif; ?>
