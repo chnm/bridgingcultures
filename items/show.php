@@ -263,11 +263,15 @@ $currentItemId = item('id');
                 <h3>Annotation</h3>
             <?php endif; ?>
             
-            <?php echo item('Item Type Metadata', 'Text'); ?>
+            <?php if (!item_has_type('Further Reading')): ?>
+                <p><?php echo item('Dublin Core', 'Description'); ?></p>
+            <?php else: ?>
+                <?php echo item('Item Type Metadata', 'Text'); ?>
+            <?php endif; ?>
             
-            <p>Region: <?php echo item('Item Type Metadata', 'Region'); ?></p>
+            <p><strong>Region:</strong> <?php echo item('Item Type Metadata', 'Region'); ?></p>
             
-            <p>Time Period: <?php echo item('Item Type Metadata', 'Time Period'); ?></p>
+            <p><strong>Time Period:</strong> <?php echo item('Item Type Metadata', 'Time Period'); ?></p>
             
             <?php if(item('Dublin Core', 'Source')): ?>
 
