@@ -12,15 +12,21 @@
     <?php endif; ?>
     
 <h2>Book List</h2>
-    
-<?php if($multiItems = multicollections_get_items_in_collection(10, 'Book')):
+
+<?php $multiItems = multicollections_get_items_in_collection(20); ?>
+
+<?php if($multiItems):
     foreach($multiItems as $multiItem) {
         set_current_item($multiItem);
-        if($fullsizeHtml = item_thumbnail(array('class' => 'theme-book-cover', 'alt' => item('Dublin Core','Title')))) {
-            echo '<div class="theme-book">';
-            echo '<a href="'.item('permalink').'">'.$fullsizeHtml.'</a>';
-            echo '<p class="theme-book-meta three columns omega"><span class="theme-book-title">'.link_to_item().'</span><br><span class="theme-book-author">by '.item('Dublin Core','Creator').'</span></p>';
-            echo '</div>';
+        $itemTags = get_tags(array('record' => $multiItem));
+        $bookshelfCheck = array_search('bookshelf', $itemTags);
+        if(item_has_type('Book') || $bookshelfCheck) {
+            if($fullsizeHtml = item_thumbnail(array('class' => 'theme-book-cover', 'alt' => item('Dublin Core','Title')))) {
+                echo '<div class="theme-book">';
+                echo '<a href="'.item('permalink').'">'.$fullsizeHtml.'</a>';
+                echo '<p class="theme-book-meta three columns omega"><span class="theme-book-title">'.link_to_item().'</span><br><span class="theme-book-author">by '.item('Dublin Core','Creator').'</span></p>';
+                echo '</div>';
+            }
         }
     }
 else:
