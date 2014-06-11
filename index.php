@@ -1,3 +1,5 @@
+<?php queue_js('jquery.carousel.ms.min'); ?>
+
 <?php head(array('bodyid'=>'home')); ?>	
 
 
@@ -49,7 +51,9 @@
     <?php
         $bookItems = get_items(array('type' => 'Book'),30);
         $otherItems = get_items(array('tags' => 'bookshelf'),30);
-        $carouselItems = array_merge($bookItems,$otherItems);
+        $carouselArray = array_merge($bookItems,$otherItems);
+        foreach($carouselArray as $value) $carouselValues[serialize($value)] = $value;
+        $carouselItems = array_values($carouselValues);
         set_items_for_loop($carouselItems);
     ?>
     <?php if(has_items_for_loop()): ?>
@@ -91,27 +95,56 @@
         
         $featured = random_featured_item(); 
         set_current_item($featured);
-        if(item_thumbnail()) {
+        if (item_thumbnail()) {
             echo item_thumbnail();
         }
-        echo '<h3>'.item('Dublin Core', 'Title') . '</h3>';
-        echo item('Dublin Core', 'Description');
+        echo '<div class="featured-content">';
+        echo '<h3>' . link_to_item(item('Dublin Core', 'Title'), array(), 'show', $featured) . '</h3>';
+        if (item_has_type('News/Feature Post')) {
+            echo '<p class="byline">By ';
+            echo html_escape(item('Item Type Metadata', 'Author')). ' on ';
+            echo html_escape(item('date added'));
+            echo '</p>';
+            $description = item('Item Type Metadata', 'Text');
+            if (strlen($description) > 800) {
+                echo item('Item Type Metadata', 'Text', array('snippet' => 800));
+                echo '<p>' . link_to_item('(Read full post&hellip;)', array(), 'show', $featured) . '</p>';
+            } else {
+                echo $description;
+            }
+        } else {
+            $description = item('Dublin Core', 'Description');
+            if (strlen($description) > 800) {
+                echo item('Dublin Core', 'Description', array('snippet' => 800));
+                echo '<p>' . link_to_item('(Read full post&hellip;)', array(), 'show', $featured) . '</p>';
+            } else {
+                echo $description;
+            }
+        }
+        echo '</div>';
         ?>
         
     </div>
     
     <div class="toolkit four columns omega">
     
-        <h3>Conversation Toolkit</h3>
+        <h3>Conversation<br />Toolkit</h3>
         
         <p>Tools and tips for organizing, publicizing, and hosting informative and respectful discussions in your community using the "Muslim Journeys" books, films, and art resources. </p>
 </p>
 
-        <p><a href="#" class="button">Learn about the toolkit</a></p>    
+        <p><a href="<?php echo uri('toolkit'); ?>" class="button">Learn about the toolkit</a></p>    
 
     
     </div>    
 
 </div>
+
+<script type="text/javascript">
+jQuery(function(){
+    jQuery("div.books").carousel( { dispItems: 8, effect: "fade", horizontalMargin: 5 } );
+});
+</script> 
+
 
 <?php foot(); ?>
