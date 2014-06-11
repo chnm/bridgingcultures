@@ -1,6 +1,6 @@
 <?php head(array('title'=>'Browse Themes','bodyid'=>'themes','bodyclass' => 'browse')); ?>
 
-<h1>Browse Themes</h1>
+<h1>Explore a Theme</h1>
 
 
 <div class="twelve columns offset-by-two alpha row">
@@ -25,7 +25,7 @@ set_items_for_loop(get_items(array('type' => 'Theme Icon'),6));
                 
                 echo '<div class="three columns alpha">';
                 echo '<div class="theme-icon">';
-                echo '<a href="collections/show/'.collection('id').'">'.$fullsizeHtml.'</a>'; 
+                echo '<a href="show/'.collection('id').'">'.$fullsizeHtml.'</a>'; 
                 echo '</div>';
                 echo '</div>';
             } else {
@@ -35,9 +35,9 @@ set_items_for_loop(get_items(array('type' => 'Theme Icon'),6));
 
             <div class="nine columns omega">
             
-                <h3><a href="collections/show/<?php echo collection('id'); ?>"><?php echo collection('name'); ?></a></h3>
+                <h3><a href="show/<?php echo collection('id'); ?>"><?php echo collection('name'); ?></a></h3>
                 
-                <div class="theme-decription">
+                <div class="theme-description">
                     <?php echo nls2p(collection('Description')); ?>
                 </div>
             
