@@ -3,12 +3,13 @@
 <meta charset="UTF-8">
 <head>
     <title>Bridging Cultures Bookshelf: Muslim Journeys</title>
-    
+    <link rel="shortcut icon" href="<?php echo public_uri('themes/muslimjourneys/images/favicon.ico'); ?>">
 <!-- Stylesheets -->
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700,700italic|Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700,700italic|Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <?php
     queue_css(array('style','skeleton','layout', 'orangebox'), 'screen');
-    queue_js(array('jquery-1.7.2','jquery.carousel.ms.min', 'modernizr.custom.71332', 'orangebox.min', 'jquery.cookie', 'jquery.dcjqaccordion.2.9', 'jquery.hoverIntent.minified', 'quickpager.jquery'));
+    queue_css('ie', 'all', '(gte IE 6)');
+    queue_js(array('modernizr.custom.71332', 'jquery.cookie', 'jquery.hoverIntent.minified', 'selectivizr-min'));
     ?>    
 
 <!-- Javascript -->
@@ -17,36 +18,15 @@
     display_css();
     display_js(); 
     ?>
-    
-    <script type="text/javascript">
-    $(function(){
-        $("div.books").carousel( { dispItems: 8, effect: "fade", horizontalMargin: 5 } );
-    });
-    </script> 
-    
+
     <script type="text/javascript">
         oB.settings.addThis = false;
-        oB.settings.contentMinSize = [50,100];
     </script>    
-    
-    <script type="text/javascript">    
-    $(document).ready(function($) {
-        $('#accordion').dcAccordion();
-    });
-    </script>
-    
-    <script type="text/javascript">
-    $(function() {
-    	$("div.paging").quickPager( {
-    	   pageSize: 15,
-    	   pagerLocation:"both"
-    	});
-    });
-    </script>
     
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+
 
 <?php plugin_body(); ?>
 
@@ -60,8 +40,8 @@
                 
                 <ul>
                     <?php echo public_nav_main(array(
-                        'Bookshelf' => uri('books'), 
-                        'Themes'=>uri('collections'),
+                        'Bookshelf' => uri('bookshelf'), 
+                        'Themes'=>uri('themes'),
                         'Resources'=>uri('resources'),
                         'About'=>uri('about')
                     )); ?>
