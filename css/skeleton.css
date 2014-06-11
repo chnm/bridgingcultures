@@ -115,11 +115,11 @@
 
 	/* Note: Design for a width of 768px */
 
-	@media only screen and (min-width: 768px) and (max-width: 959px) {
+	/* @media only screen and (min-width: 768px) and (max-width: 959px) {
 		.container { width: 768px; }
 		/*.container .column, 
 		.container .columns { margin-left: 10px; margin-right: 10px;  }*/
-		.column.alpha, .columns.alpha 				{ margin-left: 0; margin-right: 10px; }
+		/* .column.alpha, .columns.alpha 				{ margin-left: 0; margin-right: 10px; }
 		.column.omega, .columns.omega 				{ margin-right: 0; margin-left: 10px; }
 	
 		.container .one-third.column				{ width: 236px; }
@@ -130,7 +130,7 @@
 			((768/12) - 20) * 1 = 44
 		*****************************/
 			
-		.container-twelve .one.column 					{ width: 44px;  }
+		/* .container-twelve .one.column 					{ width: 44px;  }
 		.container-twelve .two.columns 					{ width: 108px; }
 		.container-twelve .three.columns 				{ width: 172px; }
 		.container-twelve .four.columns 				{ width: 236px; }
@@ -146,7 +146,7 @@
 			
 		
 		/* Offsets */	
-		.container-twelve .offset-by-one 				{ margin-left: 64px;  }
+		/* .container-twelve .offset-by-one 				{ margin-left: 64px;  }
 		.container-twelve .offset-by-two 				{ margin-left: 128px; }
 		.container-twelve .offset-by-three 				{ margin-left: 192px; }
 		.container-twelve .offset-by-four 				{ margin-left: 256px; }
@@ -167,7 +167,7 @@
 			((768/16) - 20) * 1 = 28
 		*****************************/
 			
-		.container-sixteen .one.column 						{ width: 28px;  }
+		/* .container-sixteen .one.column 						{ width: 28px;  }
 		.container-sixteen .two.columns 					{ width: 76px;  }
 		.container-sixteen .three.columns 					{ width: 124px; }
 		.container-sixteen .four.columns 					{ width: 172px; }
@@ -187,7 +187,7 @@
 			
 		
 		/* Offsets */	
-		.container-sixteen .offset-by-one 					{ margin-left: 48px;  }
+		/* .container-sixteen .offset-by-one 					{ margin-left: 48px;  }
 		.container-sixteen .offset-by-two 					{ margin-left: 96px;  }
 		.container-sixteen .offset-by-three 				{ margin-left: 144px; }
 		.container-sixteen .offset-by-four 					{ margin-left: 192px; }
@@ -210,7 +210,7 @@
 	
 	/* Note: Design for a width of 320px */
 	
-	@media only screen and (max-width: 767px) {
+	/* @media only screen and (max-width: 767px) {
 		.container { width: 300px; }
 		.columns, .column { margin: 0; }
 		
@@ -231,10 +231,10 @@
 		.container .fifteen.columns,
 		.container .sixteen.columns, 
 		.container .one-third.column, 
-		.container .two-thirds.column  { width: 300px; }
+		.container .two-thirds.column  { width: 300px; } */
 		
 		/* Offsets */	
-		.container .offset-by-one,				
+		/* .container .offset-by-one,				
 		.container .offset-by-two, 					
 		.container .offset-by-three, 				
 		.container .offset-by-four, 					
@@ -250,7 +250,7 @@
 		.container .offset-by-fourteen, 			
 		.container .offset-by-fifteen { margin-left: 0; } 			
 				
-	}	 
+	}	  */
 	
 	
 /* #Mobile (Landscape)
@@ -258,7 +258,7 @@
 
 	/* Note: Design for a width of 480px */
 	
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
+	/* @media only screen and (min-width: 480px) and (max-width: 767px) {
 		.container { width: 420px; }
 		.columns, .column { margin: 0; }
 		
@@ -280,7 +280,7 @@
 		.container .sixteen.columns,
 		.container .one-third.column, 
 		.container .two-thirds.column { width: 420px; }
-	}
+	} */
 	 
 	
 /* #Clearing
