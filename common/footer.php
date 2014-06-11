@@ -28,11 +28,31 @@
         
         <p>Design by the <a href="http://chnm.gmu.edu" target="_blank">Roy Rosenzweig Center for History and New Media</a>.  Powered by <a href="http://www.omeka.org" target="_blank">Omeka</a>.</p>
         
-        <p>Contact us</p>
+        <p class="contact">
+            <a href="<?php echo uri('contact'); ?>">Contact us</a>
+            <a href="https://www.facebook.com/MuslimJourneysBridgingCulturesBookshelf"><img src="<?php echo img('facebook.png'); ?>" alt="Facebook"></a>
+            <a href="https://www.twitter.com/NEHBookshelf"><img src="<?php echo img('twitter.png'); ?>" alt="Twitter"></a>
+        </p>
+        
         
         </div>
     
     </footer>
+    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29418292-1']);
+  _gaq.push(['_setDomainName', 'neh.gov']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </body>
 
